@@ -68,11 +68,10 @@ This portfolio belongs to Roman Kryzhanovskyi, a User Experience Designer specia
 ## 📞 Contact
 
 **Roman Kryzhanovskyi**
-- Portfolio: https://welsewool.github.io/portfolio/
+- Portfolio: https://the-roman-k.github.io/portfolio/
 - Location: Available for remote and on-site work
 - Specialties: UX/UI Design, Design Systems, AI Integration
 
 ---
 
 *This portfolio showcases a decade of design expertise with a focus on user-centered solutions and innovative design systems.*
-# portfolio
