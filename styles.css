@@ -3164,3 +3164,73 @@
 .project-card--highlight {
     border: 2px solid var(--yellow-400);
 }
+/* =========================================================
+   MOBILE OVERLAY
+   ========================================================= */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-xl);
+}
+
+.mobile-overlay.show {
+    display: flex;
+}
+
+.mobile-overlay-content {
+    background-color: var(--white);
+    padding: var(--space-3xl);
+    border-radius: 16px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.mobile-overlay-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2xl);
+}
+
+.mobile-overlay-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.mobile-btn {
+    padding: var(--space-md) var(--space-xl);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+}
+
+.mobile-btn-yes {
+    background-color: var(--yellow-400);
+    color: var(--black);
+}
+
+.mobile-btn-yes:hover {
+    background-color: #ffb91a;
+}
+
+.mobile-btn-no {
+    background-color: var(--grey-800);
+    color: var(--white);
+}
+
+.mobile-btn-no:hover {
+    background-color: var(--black);
+}

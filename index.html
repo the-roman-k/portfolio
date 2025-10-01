@@ -31,6 +31,17 @@
     <link rel="stylesheet" href="pages/index.css">
 </head>
 <body>
+    <!-- Mobile Detection Overlay -->
+    <div id="mobile-overlay" class="mobile-overlay">
+        <div class="mobile-overlay-content">
+            <p class="mobile-overlay-text">🤔 Are you sure you want to have a look on design portfolio on mobile screen?</p>
+            <div class="mobile-overlay-buttons">
+                <button id="mobile-yes-btn" class="mobile-btn mobile-btn-yes">Yes, I want</button>
+                <button id="mobile-no-btn" class="mobile-btn mobile-btn-no">No, show me LinkedIn</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation Wrapper -->
     <div class="nav-wrapper">
         <!-- Navigation Level 1 -->
@@ -518,5 +529,34 @@
     </footer>
 
     <script src="navigation.js"></script>
+    <script>
+        // Mobile detection and overlay control
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                || window.innerWidth <= 768;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('mobile-overlay');
+            const yesBtn = document.getElementById('mobile-yes-btn');
+            const noBtn = document.getElementById('mobile-no-btn');
+
+            // Check if user has already made a choice
+            const hasChosenToView = sessionStorage.getItem('mobileViewChoice');
+
+            if (isMobileDevice() && !hasChosenToView) {
+                overlay.classList.add('show');
+            }
+
+            yesBtn.addEventListener('click', function() {
+                sessionStorage.setItem('mobileViewChoice', 'yes');
+                overlay.classList.remove('show');
+            });
+
+            noBtn.addEventListener('click', function() {
+                window.location.href = 'https://www.linkedin.com/in/krizhanovsky/';
+            });
+        });
+    </script>
 </body>
 </html>
