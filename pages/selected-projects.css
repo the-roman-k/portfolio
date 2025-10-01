@@ -61,16 +61,18 @@
 }
 
 .project-card-image {
-  aspect-ratio: 16/10;
   overflow: hidden;
   background: var(--grey-100);
-  padding: var(--space-xl);
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform var(--transition);
 }
 
