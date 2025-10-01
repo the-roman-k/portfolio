@@ -1,0 +1,233 @@
+/* =========================================================
+   DESIGN SYSTEM PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Design System Hero Section */
+.design-system-hero {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .design-system-hero {
+    min-height: 720px;
+  }
+}
+
+.design-system-hero .hero-text-content {
+  width: 40%;
+}
+
+/* Design Systems Title with Gradient */
+.design-systems-title {
+  background: linear-gradient(to bottom, #92b7c0, #40678c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Design Age AI Section */
+.design-age-ai-section {
+  background: var(--grey-100, #F9F9F9) !important;
+}
+
+/* Design System First Attempt Section */
+.design-system-first-attempt-section {
+  background: var(--grey-100, #F9F9F9) !important;
+}
+
+/* Highlight Boxes */
+.highlight-box {
+  background: var(--yellow-400);
+  padding: var(--space-md);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.highlight-box--small {
+  background: var(--yellow-400);
+  padding: 0 var(--space-sm);
+  border-radius: 4px;
+  display: inline;
+}
+
+/* Styleguide Section */
+.styleguide-section {
+  background: var(--white);
+  padding: var(--space-3xl);
+  width: 100%;
+}
+
+.styleguide-section > * {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Spacing Showcase */
+.spacing-showcase {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-4xl);
+}
+
+.spacing-demo { background: var(--yellow-400); }
+.spacing-0 { width: 0; height: 0; }
+.spacing-xxs { width: var(--space-xxs); height: var(--space-xxs); }
+.spacing-xs { width: var(--space-xs); height: var(--space-xs); }
+.spacing-sm { width: var(--space-sm); height: var(--space-sm); }
+.spacing-md { width: var(--space-md); height: var(--space-md); }
+.spacing-lg { width: var(--space-lg); height: var(--space-lg); }
+.spacing-xl { width: var(--space-xl); height: var(--space-xl); }
+.spacing-2xl { width: var(--space-2xl); height: var(--space-2xl); }
+.spacing-x2xl { width: var(--space-3xl); height: var(--space-3xl); }
+.spacing-4xl { width: var(--space-4xl); height: var(--space-4xl); }
+.spacing-5xl { width: var(--space-5xl); height: var(--space-5xl); }
+.spacing-6xl { width: var(--space-6xl); height: var(--space-6xl); }
+.spacing-mega { width: var(--space-mega); height: var(--space-mega); }
+
+/* Hero section text styling */
+.design-system-hero p {
+  color: #74a7c0;
+}
+
+/* Slides Holder Container */
+.slides-holder {
+  background: #28303F;
+  display: flex;
+  padding: var(--space-2xl, 60px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl, 60px);
+  width: 100%;
+}
+
+/* Card Styling for All Sections inside slides-holder */
+.slides-holder section {
+  border-radius: var(--space-xs, 8px);
+  background: var(--white, #FFF);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 14px 0 rgba(0, 0, 0, 0.25), 0 4px 74px 0 #87ADB9;
+  max-width: 1600px;
+  width: 100%;
+  padding: var(--space-2xl);
+  box-sizing: border-box;
+}
+
+/* How I create Design Systems Section */
+.section-5-columns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.section-5-columns h2 {
+  text-align: center;
+}
+
+.section-5-columns .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 100%;
+}
+
+.section-5-columns .columns {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+}
+
+.section-5-columns .columns > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.section-5-columns .number {
+  background: #293140;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: var(--text-heading-06);
+  line-height: var(--line-heading-06);
+}
+
+.section-5-columns h5 {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Responsive Styling for Slides Holder */
+@media (max-width: 768px) {
+  .slides-holder {
+    padding: var(--space-xl) var(--space-md);
+    gap: var(--space-xl);
+  }
+
+  .slides-holder section {
+    padding: var(--space-xl);
+  }
+
+  .section-5-columns .columns {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .section-5-columns {
+    gap: var(--space-2xl);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slides-holder {
+    padding: var(--space-3xl) var(--space-lg);
+    gap: var(--space-3xl);
+  }
+
+  .slides-holder section {
+    padding: var(--space-3xl);
+  }
+
+  .section-5-columns .columns {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .section-5-columns .columns > div {
+    flex: 100%;
+  }
+
+  .section-5-columns .columns > div:nth-child(5) {
+    flex: 0 0 100%;
+  }
+}
+
+/* Typography Overrides for Responsive */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .design-system-hero .hero-text-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-system-hero {
+    background-size: cover !important;
+  }
+
+  .design-system-hero .hero-text-content {
+    width: 100% !important;
+  }
+}

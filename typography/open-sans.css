@@ -1,0 +1,234 @@
+/* Open Sans Typography Styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  /* Typography Variables */
+  --font-primary: 'Open Sans', sans-serif;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
+
+  /* Font Sizes - Desktop (Default) */
+  --text-display: 80px;
+  --text-heading-01: 60px;
+  --text-heading-02: 40px;
+  --text-heading-03: 32px;
+  --text-heading-04: 24px;
+  --text-heading-05: 20px;
+  --text-heading-06: 18px;
+  --text-body-01: 20px;
+  --text-body-02: 16px;
+  --text-body-03: 16px;
+  --text-lead: 24px;
+  --text-subtitle: 24px;
+
+  /* Line Heights - Desktop (Default) */
+  --line-display: 80px;
+  --line-heading-01: 72px;
+  --line-heading-02: 48px;
+  --line-heading-03: 40px;
+  --line-heading-04: 20px;
+  --line-heading-05: 20px;
+  --line-heading-06: 22px;
+  --line-body-01: 28px;
+  --line-body-02: 28px;
+  --line-body-03: 24px;
+  --line-lead: 32px;
+  --line-subtitle: 24px;
+}
+
+/* Responsive Typography Tokens */
+@media (max-width: 768px) {
+  :root {
+    --text-display: 48px;
+    --text-heading-01: 48px;
+    --text-heading-02: 32px;
+    --text-heading-03: 26px;
+    --text-heading-04: 22px;
+    --text-heading-05: 18px;
+    --text-heading-06: 16px;
+    --text-body-01: 18px;
+    --text-body-02: 15px;
+    --text-body-03: 15px;
+    --text-lead: 20px;
+    --text-subtitle: 20px;
+
+    --line-display: 48px;
+    --line-heading-01: 54px;
+    --line-heading-02: 36px;
+    --line-heading-03: 30px;
+    --line-heading-04: 18px;
+    --line-heading-05: 18px;
+    --line-heading-06: 20px;
+    --line-body-01: 26px;
+    --line-body-02: 22px;
+    --line-body-03: 22px;
+    --line-lead: 28px;
+    --line-subtitle: 24px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --text-display: 72px;
+    --text-heading-01: 54px;
+    --text-heading-02: 36px;
+    --text-heading-03: 29px;
+    --text-heading-04: 23px;
+    --text-heading-05: 19px;
+    --text-heading-06: 17px;
+    --text-body-01: 19px;
+    --text-body-02: 15px;
+    --text-body-03: 15px;
+    --text-lead: 22px;
+    --text-subtitle: 22px;
+
+    --line-display: 72px;
+    --line-heading-01: 63px;
+    --line-heading-02: 42px;
+    --line-heading-03: 35px;
+    --line-heading-04: 19px;
+    --line-heading-05: 19px;
+    --line-heading-06: 21px;
+    --line-body-01: 27px;
+    --line-body-02: 23px;
+    --line-body-03: 23px;
+    --line-lead: 30px;
+    --line-subtitle: 26px;
+  }
+}
+
+/* Display */
+.display {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-display);
+  text-transform: none;
+}
+
+/* Headings */
+h1 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-heading-01);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-heading-01);
+  text-transform: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-heading-02);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-heading-02);
+  text-transform: none;
+}
+
+h3 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-heading-03);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-heading-03);
+  text-transform: none;
+}
+
+h4 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-heading-04);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-heading-04);
+  text-transform: none;
+}
+
+h5 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-heading-05);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-heading-05);
+  text-transform: none;
+}
+
+h6 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-heading-06);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-heading-06);
+  text-transform: none;
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-subtitle);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-subtitle);
+}
+
+/* Lead Text */
+.lead-text {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-lead);
+  font-weight: var(--weight-light);
+  line-height: var(--line-lead);
+}
+
+/* Body Text */
+.body-01 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-01);
+  font-weight: var(--weight-light);
+  line-height: var(--line-body-01);
+}
+
+.body-01-bold {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-01);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-body-01);
+}
+
+.body-02 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-02);
+  font-weight: var(--weight-light);
+  line-height: var(--line-body-02);
+}
+
+.body-02-bold {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-02);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-body-02);
+}
+
+.body-03 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-03);
+  font-weight: var(--weight-light);
+  line-height: var(--line-body-03);
+}
+
+/* Strong tag styling */
+strong {
+  font-weight: var(--weight-bold); /* 700 */
+  font-style: normal;
+}

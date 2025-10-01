@@ -1,0 +1,46 @@
+/* =========================================================
+   VEHICLE TRACKING SYSTEM PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Vehicle Hero Section */
+.vehicle-hero-section {
+  background-image: url('../img/vehicle-tracking-system/vehicle-tracking-system-hero-bg@2x.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (min-width: 1200px) {
+  .vehicle-hero-section {
+    height: 75vh !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+.vehicle-hero-section h1,
+.vehicle-hero-section p {
+  color: var(--white) !important;
+}
+
+/* Main Flow Animation Section */
+.main-flow-animation-content {
+  display: flex;
+  align-items: center;
+  max-width: var(--content-max);
+}
+
+/* Chosen UI Model Section */
+.bg-chosen-ui-model {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.00) 3.81%), #F4F5F7 !important;
+}
+
+/* Final UI Section - No Gap */
+.final-ui-section {
+  gap: 0 !important;
+}
+
+/* Main Flow Animation Section */
+.bg-main-flow-animation {
+  background: #F3F3F3 !important;
+}

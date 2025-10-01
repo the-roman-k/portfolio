@@ -1,0 +1,523 @@
+/* =========================================================
+   TAXATION PLATFORM PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Taxation Platform Hero Section */
+.taxation-hero-section {
+  background-image: url('../img/taxation-platform/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  padding-bottom: 0;
+  border-bottom: var(--space-md) solid var(--black);
+}
+
+.taxation-hero-section .hero-vertical-content {
+  gap: var(--space-2xl);
+}
+
+.taxation-hero-section .hero-text-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  gap: var(--space-md);
+}
+
+.taxation-hero-section .hero-image-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+
+.taxation-hero-section .hero-image-bottom img {
+  max-width: 958px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.taxation-hero-section h1 {
+  color: var(--black);
+  font-size: var(--text-display);
+  line-height: var(--line-display);
+  font-weight: var(--weight-bold);
+}
+
+.taxation-hero-section p {
+  color: var(--black);
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+  .taxation-hero-section {
+    min-height: unset;
+  }
+}
+
+/* Section Background Classes */
+.section-bg-white-shadow {
+  background: var(--white);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+.section-bg-grey {
+  background: var(--grey-100);
+}
+
+.section-bg-light-grey {
+  background: #EBEBEB;
+}
+
+.section-bg-grey-shadow {
+  background: var(--grey-100);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Galleries */
+.roadmaps-gallery,
+.workshop-gallery,
+.documentation-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  width: 100%;
+}
+
+.roadmaps-gallery img,
+.workshop-gallery img,
+.documentation-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* User Interface Design Section */
+.section-ui-design {
+  background: #fdbe5f;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  align-items: center;
+  padding: var(--space-3xl);
+}
+
+@media (max-width: 768px) {
+  .section-ui-design {
+    padding: var(--space-lg);
+  }
+}
+
+.ui-design-title {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-heading-02);
+  line-height: var(--line-heading-02);
+  letter-spacing: var(--tracking-tight);
+  color: var(--black);
+  text-align: center;
+  margin: 0;
+}
+
+.ui-design-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .ui-design-container {
+    gap: var(--space-xl);
+  }
+}
+
+.macbook-image {
+  max-width: 1201px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.shadow-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 19px;
+}
+
+.shadow-element::before {
+  content: '';
+  width: 1260px;
+  height: 19px;
+  border-radius: 100%;
+  background: #7B0000;
+  filter: blur(27px);
+}
+
+@media (max-width: 768px) {
+  .shadow-element::before {
+    width: 100%;
+    height: 8px;
+    border-radius: 100%;
+    filter: blur(16px);
+  }
+}
+
+.ui-screens-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  width: 100%;
+  align-items: center;
+  max-width: var(--content-max);
+}
+
+.ui-screen {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--space-xs);
+}
+
+/* Responsive UI Design */
+
+@media (max-width: 768px) {
+  .ui-design-title {
+    font-size: var(--text-heading-03);
+    line-height: var(--line-heading-03);
+  }
+}
+
+/* Before/After Comparison Section */
+.section-before-after-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-3xl);
+}
+
+@media (max-width: 768px) {
+  .section-before-after-comparison {
+    gap: var(--space-lg);
+    padding: var(--space-2xl) var(--space-xl);
+  }
+}
+
+.before-after-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.before-after-column {
+  flex: 1;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .before-after-column {
+    gap: var(--space-xl);
+  }
+}
+
+.before-after-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 20px;
+  color: #101010;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.before-after-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.before-after-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Responsive Before/After */
+@media (max-width: 768px) {
+  .before-after-columns {
+    flex-direction: column;
+  }
+
+  .before-after-column {
+    min-width: unset;
+  }
+}
+
+/* UI Mockups Gallery Section */
+.section-ui-mockups {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-3xl) var(--space-3xl) 0 var(--space-3xl);
+}
+
+@media (max-width: 768px) {
+  .section-ui-mockups {
+    padding: var(--space-2xl) var(--space-xl) var(--space-xl) var(--space-xl);
+  }
+}
+
+.ui-mockups-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.ui-mockups-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* The Result Section - Taxation Platform specific */
+.section-title-2col h2 {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-heading-02);
+  line-height: var(--line-heading-02);
+  letter-spacing: var(--tracking-tight);
+  color: var(--black);
+  margin: 0;
+}
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 100%;
+}
+
+.result-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4xl);
+  width: 100%;
+}
+
+.result-column {
+  flex: 1;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  color: var(--black);
+}
+
+.result-column:first-child {
+  width: 480px;
+  flex: 0 0 480px;
+}
+
+.result-column-title {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-heading-04);
+  line-height: var(--line-heading-04);
+  color: var(--black);
+  margin: 0;
+}
+
+.result-text {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-light);
+  font-size: var(--text-body-02);
+  line-height: var(--line-body-02);
+  color: var(--black);
+}
+
+.result-text p {
+  margin: 0 0 var(--space-md) 0;
+}
+
+.result-text p:last-child {
+  margin-bottom: 0;
+}
+
+.result-achievements {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-light);
+  font-size: var(--text-body-02);
+  line-height: var(--line-body-02);
+  color: var(--black);
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.result-achievements li {
+  margin: 0 0 0 var(--space-lg);
+  position: relative;
+}
+
+.result-achievements li::before {
+  content: '•';
+  position: absolute;
+  left: calc(-1 * var(--space-lg));
+}
+
+.result-achievements li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Result Section */
+@media (max-width: 768px) {
+  .result-columns {
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+
+  .result-column {
+    min-width: unset;
+  }
+
+  .result-column:first-child {
+    width: 100%;
+    flex: 1;
+  }
+
+  .section-title-2col h2 {
+    font-size: var(--text-heading-03);
+    line-height: var(--line-heading-03);
+  }
+}
+
+/* Tax Calculator Section */
+.section-tax-calculator {
+  background: #E8F4FD;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-3xl);
+}
+
+.section-tax-calculator h2 {
+  color: #101010;
+  text-align: center;
+}
+
+.section-tax-calculator .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-tax-calculator .calculator-image {
+  aspect-ratio: 1714/938;
+  background-image: url('../img/taxation-platform/tax-calculator@2x.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/* Taxation Platform Background Colors */
+.taxation-platform .bg-grey {
+  background: #E8F4FD !important;
+}
+
+/* How I validated Ideas Section */
+.section-validated-ideas {
+  background: var(--grey-100, #F9F9F9);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+  position: relative;
+}
+
+.section-validated-ideas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 788.557px;
+  height: 354.714px;
+  background-image: url('../img/taxation-platform/analytics.png');
+  background-size: 100% 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-validated-ideas .text-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Chart Image Section */
+.section-chart-image {
+  background: #f9f9f9;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 0 0;
+}
+
+.chart-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.chart-image {
+  background-image: url('../img/taxation-platform/chart@2x.png');
+  background-size: 100% 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 326px;
+  width: 316px;
+}
+
+/* The Result Section */
+.section-result {
+  background: white;
+}
+
+.highlight-box-yellow {
+  background: #ffc93d;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.highlight-box-yellow .body-02-bold {
+  color: #101010;
+  white-space: nowrap;
+}

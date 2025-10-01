@@ -1,0 +1,276 @@
+/* DM Serif + DM Sans Typography Styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital,wght@0,400;1,400&display=swap');
+
+:root {
+  /* Typography Variables */
+  --font-primary: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'DM Serif Text', Georgia, serif;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* Font Sizes - Desktop (Default) */
+  --text-display: 120px;
+  --text-heading-01: 96px;
+  --text-heading-02: 60px;
+  --text-heading-03: 44px;
+  --text-heading-04: 28px;
+  --text-heading-05: 24px;
+  --text-heading-06: 20px;
+  --text-body-01: 20px;
+  --text-body-02: 18px;
+  --text-body-03: 16px;
+  --text-lead: 28px;
+  --text-quote: 40px;
+  --text-subtitle: 24px;
+
+  /* Line Heights - Desktop (Default) */
+  --line-display: 180px;
+  --line-heading-01: 80px;
+  --line-heading-02: 60px;
+  --line-heading-03: 40px;
+  --line-heading-04: 24px;
+  --line-heading-05: 28px;
+  --line-heading-06: 24px;
+  --line-body-01: 28px;
+  --line-body-02: 28px;
+  --line-body-03: 24px;
+  --line-lead: 36px;
+  --line-quote: 56px;
+  --line-subtitle: 24px;
+}
+
+/* Responsive Typography Tokens */
+@media (max-width: 768px) {
+  :root {
+    --text-display: 96px;
+    --text-heading-01: 72px;
+    --text-heading-02: 36px;
+    --text-heading-03: 28px;
+    --text-heading-04: 24px;
+    --text-heading-05: 20px;
+    --text-heading-06: 18px;
+    --text-body-01: 18px;
+    --text-body-02: 16px;
+    --text-body-03: 15px;
+    --text-lead: 24px;
+    --text-quote: 32px;
+    --text-subtitle: 18px;
+
+    --line-display: 96px;
+    --line-heading-01: 72px;
+    --line-heading-02: 40px;
+    --line-heading-03: 32px;
+    --line-heading-04: 28px;
+    --line-heading-05: 24px;
+    --line-heading-06: 22px;
+    --line-body-01: 26px;
+    --line-body-02: 24px;
+    --line-body-03: 22px;
+    --line-lead: 32px;
+    --line-quote: 40px;
+    --line-subtitle: 22px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --text-display: 160px;
+    --text-heading-01: 80px;
+    --text-heading-02: 48px;
+    --text-heading-03: 36px;
+    --text-heading-04: 26px;
+    --text-heading-05: 22px;
+    --text-heading-06: 19px;
+    --text-body-01: 19px;
+    --text-body-02: 17px;
+    --text-body-03: 15px;
+    --text-lead: 26px;
+    --text-quote: 36px;
+    --text-subtitle: 22px;
+
+    --line-display: 160px;
+    --line-heading-01: 76px;
+    --line-heading-02: 52px;
+    --line-heading-03: 40px;
+    --line-heading-04: 30px;
+    --line-heading-05: 26px;
+    --line-heading-06: 23px;
+    --line-body-01: 27px;
+    --line-body-02: 25px;
+    --line-body-03: 23px;
+    --line-lead: 34px;
+    --line-quote: 44px;
+    --line-subtitle: 26px;
+  }
+}
+
+/* Responsive Typography Tokens */
+@media (max-width: 480px) {
+  :root {
+    --text-display: 96px;
+    --text-heading-01: 52px;
+    --text-heading-02: 36px;
+    --text-heading-03: 28px;
+    --text-heading-04: 24px;
+    --text-heading-05: 20px;
+    --text-heading-06: 18px;
+    --text-body-01: 18px;
+    --text-body-02: 16px;
+    --text-body-03: 15px;
+    --text-lead: 24px;
+    --text-quote: 32px;
+    --text-subtitle: 18px;
+
+    --line-display: 96px;
+    --line-heading-01: 52px;
+    --line-heading-02: 40px;
+    --line-heading-03: 32px;
+    --line-heading-04: 28px;
+    --line-heading-05: 24px;
+    --line-heading-06: 22px;
+    --line-body-01: 26px;
+    --line-body-02: 24px;
+    --line-body-03: 22px;
+    --line-lead: 32px;
+    --line-quote: 40px;
+    --line-subtitle: 22px;
+  }
+}
+
+/* Display */
+.display {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-display);
+  text-transform: none;
+}
+
+/* Headings */
+h1 {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-heading-01);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-heading-01);
+  text-transform: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-heading-02);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-heading-02);
+  text-transform: none;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-heading-03);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-heading-03);
+  text-transform: none;
+}
+
+h4 {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-heading-04);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-heading-04);
+  text-transform: none;
+}
+
+h5 {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-heading-05);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-heading-05);
+  text-transform: none;
+}
+
+h6 {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--text-heading-06);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-heading-06);
+  text-transform: none;
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-subtitle);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-subtitle);
+  text-transform: uppercase;
+}
+
+/* Lead Text */
+.lead-text {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-lead);
+  font-weight: var(--weight-light);
+  line-height: var(--line-lead);
+}
+
+/* Body Text */
+.body-01 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-01);
+  font-weight: var(--weight-light);
+  line-height: var(--line-body-01);
+}
+
+.body-01-bold {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-01);
+  font-weight: var(--weight-black);
+  line-height: var(--line-body-01);
+}
+
+.body-02 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-02);
+  font-weight: var(--weight-light);
+  line-height: var(--line-body-02);
+}
+
+.body-02-bold {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-02);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-body-02);
+}
+
+.body-03 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: var(--text-body-03);
+  font-weight: var(--weight-light);
+  line-height: var(--line-body-03);
+}
+
+/* Quote */
+.quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-quote);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-quote);
+}

@@ -1,0 +1,295 @@
+/* =========================================================
+   MEDIA PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Media Hero Section */
+.media-hero-section {
+  background-image: url('../img/media/section-project-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px;
+  overflow: hidden;
+}
+
+.media-hero-section .hero-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.media-hero-section .hero-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.media-hero-section .medium-title {
+  color: white;
+}
+
+/* Hero description styling handled by .body-02 class */
+
+.media-hero-section .hero-image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.media-hero-section .hero-image-content img {
+  aspect-ratio: 1200/767;
+  object-fit: contain;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Design in the Age of AI Section */
+.design-age-ai-section {
+  background-image: url('../img/media/design-in-age-of-ai-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px;
+}
+
+.design-age-ai-section .text-image-content {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.design-age-ai-section .image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.design-age-ai-section .image-content img {
+  aspect-ratio: 1471/867;
+  object-fit: contain;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.design-age-ai-section .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.design-age-ai-section .text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Article description styling handled by .body-02 class */
+
+.design-age-ai-section .quote-section {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.design-age-ai-section .quote {
+  letter-spacing: -1.5px;
+  color: #101010;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* Quote highlight styling can be removed as it's redundant */
+
+/* Preserve Human Interaction Section */
+.preserve-human-section {
+  background: white;
+  padding: 80px;
+}
+
+.preserve-human-section .text-image-content {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.preserve-human-section .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.preserve-human-section .text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Article description styling handled by .body-02 class */
+
+.preserve-human-section .image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.preserve-human-section .image-content img {
+  aspect-ratio: 1471/867;
+  object-fit: contain;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Design System Section */
+.design-system-section {
+  background-image: url('../img/media/design-system-from-first-attempt-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px;
+}
+
+.design-system-section .text-image-content {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.design-system-section .image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.design-system-section .image-content img {
+  aspect-ratio: 1471/867;
+  object-fit: contain;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.design-system-section .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.design-system-section .text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Article description styling handled by .body-02 class */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .media-hero-section,
+  .design-age-ai-section,
+  .preserve-human-section,
+  .design-system-section {
+    padding: var(--space-2xl) var(--space-2xl);
+  }
+
+  .media-hero-section .hero-content,
+  .design-age-ai-section .text-image-content,
+  .preserve-human-section .text-image-content,
+  .design-system-section .text-image-content {
+    gap: var(--space-xl);
+  }
+
+  .media-hero-section .hero-text-content {
+    width: 480px;
+  }
+
+  .design-age-ai-section .text-content,
+  .preserve-human-section .text-content,
+  .design-system-section .text-content {
+    width: 480px;
+  }
+
+  .media-hero-section .medium-title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  /* h2 responsive styling handled by typography system */
+}
+
+@media (max-width: 768px) {
+  .media-hero-section,
+  .design-age-ai-section,
+  .preserve-human-section,
+  .design-system-section {
+    padding: var(--space-2xl) var(--space-2xl);
+  }
+
+  .media-hero-section .hero-content,
+  .design-age-ai-section .text-image-content,
+  .preserve-human-section .text-image-content,
+  .design-system-section .text-image-content {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .media-hero-section .hero-text-content,
+  .design-age-ai-section .text-content,
+  .preserve-human-section .text-content,
+  .design-system-section .text-content {
+    width: 100%;
+  }
+
+  .media-hero-section .medium-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  /* h2 and quote responsive styling handled by typography system */
+}
+
+@media (max-width: 480px) {
+  .media-hero-section,
+  .design-age-ai-section,
+  .preserve-human-section,
+  .design-system-section {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+}

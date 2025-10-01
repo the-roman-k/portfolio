@@ -1,0 +1,381 @@
+/* =========================================================
+   AI PROJECTS PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* AI Projects Hero Section */
+.ai-projects-hero {
+  background: linear-gradient(56deg, #6CEDEF 10.29%, #2A47A0 111.94%) !important;
+}
+
+.ai-projects-hero .hero-image-top img {
+  max-width: 720px;
+  width: 100%;
+  height: auto;
+}
+
+.ai-projects-hero h1,
+.ai-projects-hero p {
+  color: var(--black) !important;
+}
+
+/* AI Utilization Section */
+.ai-utilization-section {
+  background: linear-gradient(56deg, #6CEDEF 10.29%, #2A47A0 111.94%) !important;
+}
+
+.ai-utilization-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  justify-content: space-between;
+  margin-bottom: var(--space-2xl);
+}
+
+/* TradingView Section */
+.tradingview-section {
+  position: relative;
+  background-image: url('../img/ai-projects/tradingview-indicators-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.tradingview-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.tradingview-section .hero-vertical-content {
+  position: relative;
+  z-index: 2;
+}
+
+.tradingview-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tradingview-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.tradingview-section h1,
+.tradingview-section h2,
+.tradingview-section h3,
+.tradingview-section p {
+  color: var(--white) !important;
+}
+
+/* BUY/SELL Bot Section */
+.buy-sell-bot-section {
+  background: radial-gradient(50.53% 100.78% at 65.38% 52.13%, rgba(167, 4, 255, 0.20) 20.67%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #160D29 0%, #000 76.44%, #1E1435 100%) !important;
+}
+
+.buy-sell-bot-section h1,
+.buy-sell-bot-section h2,
+.buy-sell-bot-section h3,
+.buy-sell-bot-section h4,
+.buy-sell-bot-section h5,
+.buy-sell-bot-section p,
+.buy-sell-bot-section li {
+  color: var(--white) !important;
+}
+
+.buy-sell-bot-section .image-content img {
+  border-radius: 8px;
+}
+
+/* ATR Indicator Section */
+.atr-indicator-section {
+  background: radial-gradient(50.53% 100.78% at 65.38% 52.13%, rgba(167, 4, 255, 0.20) 20.67%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #160D29 0%, #000 76.44%, #1E1435 100%) !important;
+}
+
+.atr-indicator-section h1,
+.atr-indicator-section h2,
+.atr-indicator-section h3,
+.atr-indicator-section h4,
+.atr-indicator-section h5,
+.atr-indicator-section p,
+.atr-indicator-section li {
+  color: var(--white) !important;
+}
+
+.atr-indicator-section .image-content img {
+  border-radius: 8px;
+}
+
+/* X Strategy Section */
+.x-strategy-section {
+  background: radial-gradient(50.53% 100.78% at 65.38% 52.13%, rgba(167, 4, 255, 0.20) 20.67%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #160D29 0%, #000 76.44%, #1E1435 100%) !important;
+}
+
+.x-strategy-section h1,
+.x-strategy-section h2,
+.x-strategy-section h3,
+.x-strategy-section h4,
+.x-strategy-section h5,
+.x-strategy-section p,
+.x-strategy-section li {
+  color: var(--white) !important;
+}
+
+.x-strategy-section .image-content img {
+  border-radius: 8px;
+}
+
+/* TradingView Indicators Sections */
+.tradingview-indicators-section {
+  background: linear-gradient(56deg, #6C6D70 10.29%, #181B25 111.94%) !important;
+}
+
+.tradingview-indicators-section h1,
+.tradingview-indicators-section h2,
+.tradingview-indicators-section h3,
+.tradingview-indicators-section p {
+  color: var(--white) !important;
+}
+
+/* Other Indicators Section */
+.other-indicators-section {
+  background: radial-gradient(62.17% 62.17% at 50% 44.41%, rgba(167, 4, 255, 0.20) 20.67%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #160D29 0%, #000 76.44%, #1E1435 100%) !important;
+}
+
+.other-indicators-section h1,
+.other-indicators-section h2,
+.other-indicators-section h3,
+.other-indicators-section h4,
+.other-indicators-section h5,
+.other-indicators-section p,
+.other-indicators-section li {
+  color: var(--white) !important;
+}
+
+.other-indicators-section .image-container img {
+  border-radius: 8px;
+}
+
+/* iOS Application Section */
+.ios-application-section {
+  background-image: url('../img/ai-projects/ios-app-bg.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ios-application-section h1,
+.ios-application-section h2,
+.ios-application-section h3,
+.ios-application-section p {
+  color: var(--white) !important;
+}
+
+/* Discovery Framework Section */
+.discovery-framework-section {
+  border-left: var(--spacing-md, 16px) solid #EB0A1E;
+  background: var(--white, #FFF);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Main Flow Section */
+.main-flow-section {
+  border-left: var(--spacing-md, 16px) solid #EB0A1E;
+  background: var(--white, #FFF);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Interactive Concept 02 Section */
+.interactive-concept-02-section {
+  border-left: var(--spacing-md, 16px) solid #EB0A1E;
+  background: var(--white, #FFF);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Functionality Map Section */
+.functionality-map-section {
+  border-left: var(--spacing-md, 16px) solid var(--black, #101010);
+  background: var(--white, #FFF);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Interactive Concept 01 Section */
+.interactive-concept-01-section {
+  border-left: var(--spacing-md, 16px) solid var(--black, #101010);
+  background: var(--white, #FFF);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Splash Screen Animation Section */
+.splash-screen-animation-section {
+  border-left: var(--spacing-md, 16px) solid var(--black, #101010);
+  background: var(--white, #FFF);
+}
+
+/* Final Design Section */
+.final-design-section {
+  border-left: var(--spacing-md, 16px) solid #EB0A1E;
+  background: var(--grey-100, #F9F9F9);
+}
+
+/* AI Integration into Shopping App Section */
+.ai-shopping-app-section {
+  background: linear-gradient(102deg, #F26760 4.31%, #B1144E 95.73%);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+.ai-shopping-app-section h1,
+.ai-shopping-app-section h2,
+.ai-shopping-app-section h3,
+.ai-shopping-app-section p {
+  color: var(--white) !important;
+}
+
+/* Full Width Image Section Template */
+.section-full-image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.full-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.full-image {
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Desert Image Implementation */
+.desert-image {
+  aspect-ratio: 1440/669;
+  background-image: url('../img/ai-projects/desert-image.png');
+}
+
+/* Personalization Section */
+.personalization-section {
+  background: #F3F2EE !important;
+}
+
+/* Notifications & AI Suggestions Section */
+.notifications-ai-suggestions-section {
+  background: #F3F2EE !important;
+}
+
+/* Liquid Spillage Software Section */
+.liquid-spillage-section {
+  background: radial-gradient(29.24% 37.2% at 50% 24.11%, rgba(5, 68, 173, 0.80) 0%, rgba(5, 68, 173, 0.00) 100%), url('../img/ai-projects/liquid-spillage-bg.png') lightgray 50% / cover no-repeat;
+}
+
+.liquid-spillage-section h1,
+.liquid-spillage-section h2,
+.liquid-spillage-section h3,
+.liquid-spillage-section p {
+  color: var(--white) !important;
+}
+
+/* Figma to JSON Plugin Section */
+.figma-json-plugin-section {
+  background: radial-gradient(50.1% 50.49% at 74.83% 47.27%, rgba(255, 0, 0, 0.70) 0%, rgba(255, 0, 0, 0.00) 100%), url('../img/ai-projects/figma-to-json-bg.png') lightgray 0px -216.112px / 100% 159.253% no-repeat;
+}
+
+.figma-json-plugin-section h1,
+.figma-json-plugin-section h2,
+.figma-json-plugin-section h3,
+.figma-json-plugin-section p {
+  color: var(--white) !important;
+}
+
+/* Figma MCP Section */
+.figma-mcp-section {
+  background: url('../img/ai-projects/figma-mcp-bg.png') #030405;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.figma-mcp-section h1,
+.figma-mcp-section h2,
+.figma-mcp-section h3,
+.figma-mcp-section p {
+  color: var(--white) !important;
+}
+
+/* Miro MCP Section */
+.miro-mcp-section {
+  background: url('../img/ai-projects/miro-mcp-bg.png') var(--yellow-400, #FFC93D);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Design Audit AI Tool Section */
+.design-audit-ai-tool-section {
+  background: url('../img/ai-projects/design-audit-tool-bg.png') #CAD8E2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.design-audit-ai-tool-section h1,
+.design-audit-ai-tool-section h2,
+.design-audit-ai-tool-section h3,
+.design-audit-ai-tool-section p {
+  color: var(--black) !important;
+}
+
+/* Typography Overrides for Responsive */
+@media (max-width: 1280px) {
+  .ai-utilization-header {
+    gap: var(--space-xl);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ai-robot-shiva img {
+    width: 300px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-utilization-header {
+    gap: var(--space-lg);
+  }
+
+  .ai-robot-shiva img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+.ai-utilization-section .column-item {
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ai-utilization-section .ai-text {
+  color: var(--white) !important;
+}

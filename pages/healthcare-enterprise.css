@@ -1,0 +1,483 @@
+/* =========================================================
+   HEALTHCARE ENTERPRISE PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Healthcare Enterprise specific styles */
+.hero-bg-gradient {
+  background: #f7fafe;
+  background-image: url('../img/healthcare-enterprise/healthcare-hero-bg@2x.png');
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Vertical Hero Section Layout */
+.section-project-hero-vertical {
+  padding: var(--space-3xl) var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.hero-content-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+.hero-image-content-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-image-content-vertical img {
+  max-width: 880px;
+  width: 100%;
+  height: auto;
+  max-height: 506px;
+  object-fit: contain;
+}
+
+.hero-text-content-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-lg);
+  width: 100%;
+}
+
+.hero-text-content-vertical h1 {
+  color: #101010;
+  margin: 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.hero-text-content-vertical p {
+  color: #101010;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Grey Background Sections */
+.bg-grey {
+  background: #F7FAFF !important;
+}
+
+/* UI Mockups Section - Full Width Image */
+.section-image-bottom-text .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Before/After Section */
+.section-before-after {
+  padding: var(--space-3xl) var(--space-2xl);
+  background: #F7FAFF !important;
+}
+
+.before-after-content {
+  display: flex;
+  gap: var(--space-4xl);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.before-content,
+.after-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Wireframes and UI Kit Sections */
+.section-wireframes,
+.section-ui-kit {
+  background: #F7FAFF !important;
+}
+
+/* Additional Grey Sections with Box Shadow */
+.section-responsive-mockups,
+.section-mobile-snapshots,
+.section-guidelines-for-devs {
+  background: #F7FAFF !important;
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+/* Objectives Section Styling */
+.section-objectives {
+  background: #4c50f4;
+  padding: var(--space-4xl);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.section-objectives h2 {
+  color: white;
+  margin: 0;
+}
+
+.objectives-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.objectives-content p {
+  color: white;
+  margin: 0;
+}
+
+.objectives-goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.objectives-goals h4 {
+  color: white;
+  margin: 0;
+}
+
+.objectives-goals ul {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  margin: 0;
+}
+
+.objectives-goals li {
+  color: white;
+  margin-bottom: var(--space-sm);
+}
+
+.objectives-goals li:last-child {
+  margin-bottom: 0;
+}
+
+.activities-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.activities-section h5 {
+  color: white;
+  margin: 0;
+}
+
+.activities-container {
+  background: #4043cc;
+  padding: var(--space-3xl);
+  border-radius: 12px;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3xl);
+}
+
+.activity-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  min-width: 240px;
+}
+
+.activity-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.activity-item .body-02-bold {
+  color: white;
+}
+
+.activity-item ul {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  margin: 0;
+}
+
+.activity-item li {
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.activity-item li:last-child {
+  margin-bottom: 0;
+}
+
+.activity-item p {
+  color: white;
+  margin: 0;
+}
+
+/* Research Approach Background */
+.section-title-items {
+  background-image: url('../img/healthcare-enterprise/final-design-bg@2x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Result Section with Blue Background */
+.section-result-blue {
+  background-image: url('../img/healthcare-enterprise/result-bg@2x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  color: white;
+}
+
+.section-result-blue h2 {
+  color: white;
+  margin: 0 auto;
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+.result-columns {
+  display: flex;
+  gap: var(--space-4xl);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.result-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 375px;
+}
+
+.result-column:first-child {
+  max-width: 600px;
+}
+
+.result-column h4 {
+  color: white;
+  margin: 0;
+}
+
+.result-column p {
+  color: white;
+  margin: 0;
+}
+
+.result-column ul {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  margin: 0;
+}
+
+.result-column li {
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.result-column li:last-child {
+  margin-bottom: 0;
+}
+
+/* Result Section Background */
+.section-title-2col {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+/* Final Design Section Background */
+.section-title-image-bottom-bg {
+  background-image: url('../img/healthcare-enterprise/final-design-bg@2x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--space-4xl) var(--space-4xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.section-title-image-bottom-bg h3 {
+  color: #101010;
+  margin: 0;
+}
+
+.section-title-image-bottom-bg .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title-image-bottom-bg .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Image Only Section */
+.section-image-only {
+  padding: var(--space-4xl) var(--space-4xl) 0;
+  background: #f8faff;
+}
+
+.section-image-only .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-image-only .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.final-design-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Responsive Design for Vertical Hero */
+@media (max-width: 1024px) {
+  .section-project-hero-vertical {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .hero-image-content-vertical img {
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design for Result Section */
+@media (max-width: 1024px) {
+  .section-result-blue {
+    padding: var(--space-2xl);
+    gap: var(--space-2xl);
+  }
+
+  .section-result-blue h2 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .result-columns {
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+
+  .result-column:first-child {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-project-hero-vertical {
+    padding: var(--space-xl) var(--space-lg);
+    min-height: 60vh;
+  }
+
+  .hero-content-vertical {
+    gap: var(--space-2xl);
+  }
+
+  .section-title-image-bottom-bg {
+    padding: var(--space-2xl) var(--space-lg) 0;
+    gap: var(--space-2xl);
+  }
+
+  .section-title-image-bottom-bg h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .section-image-only {
+    padding: var(--space-2xl) var(--space-lg) 0;
+  }
+
+  .section-result-blue {
+    padding: var(--space-2xl) var(--space-lg);
+    gap: var(--space-xl);
+  }
+
+  /* h2 responsive styling handled by typography system */
+}
+
+.final-design-section h2 {
+  color: white;
+}
+
+
+/* Responsive Design for Objectives Section */
+@media (max-width: 1024px) {
+  .section-objectives {
+    padding: var(--space-2xl);
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .activities-container {
+    padding: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-objectives {
+    padding: var(--space-xl);
+    gap: var(--space-2xl);
+  }
+
+  .activity-column {
+    gap: var(--space-xl);
+  }
+
+  .activities-container {
+    padding: var(--space-xl);
+  }
+}
+
+/* A/B Testing Section - Responsive Layout */
+@media (max-width: 1024px) {
+  .section-ab-testing .two-columns {
+    order: 2;
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+
+  .before-after-content {
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-before-after {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+}

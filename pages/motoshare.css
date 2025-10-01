@@ -1,0 +1,352 @@
+/* =========================================================
+   MOTOSHARE PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* MotoShare Hero Section */
+.motoshare-hero-section {
+  background-image: url('../img/motoshare/motoshare-hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+/* Hero section layout */
+.motoshare-hero-section .hero-vertical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.motoshare-hero-section .hero-image-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10px 32px 10px;
+  width: 100%;
+}
+
+.motoshare-hero-section .hero-image-top img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  max-height: 468px;
+  object-fit: contain;
+}
+
+.motoshare-hero-section .hero-text-bottom {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 0;
+  position: relative;
+  flex-shrink: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+/* Typography specifications from Figma */
+.motoshare-hero-section h1 {
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.motoshare-hero-section p {
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Responsive design for MotoShare hero */
+@media (max-width: 1024px) {
+  .motoshare-hero-section {
+    padding: 16px 40px 60px 40px;
+  }
+
+  .motoshare-hero-section .hero-vertical-content {
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  /* h1 responsive styling handled by typography system */
+}
+
+@media (max-width: 768px) {
+  .motoshare-hero-section {
+    padding: 16px 20px 40px 20px;
+  }
+
+  .motoshare-hero-section .hero-vertical-content {
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  /* Typography responsive styling handled by typography system */
+}
+
+/* Typography handled by typography/roboto.css - no overrides needed */
+
+/* Motorcycles Gallery Section */
+.section-motorcycles-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section-motorcycles-gallery::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #f9f9f9;
+  pointer-events: none;
+}
+
+.motorcycles-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.motorcycle-image {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-height: 1px;
+  min-width: 1px;
+  background-repeat: no-repeat;
+}
+
+.motorcycle-01 {
+  aspect-ratio: 800/515;
+  background-image: url('../img/motoshare/motorcycle-01@2x.png');
+  background-size: 100% 100%;
+}
+
+.motorcycle-02 {
+  aspect-ratio: 800/515;
+  background-image: url('../img/motoshare/motorcycle-02@2x.png');
+  background-size: 100% 100%;
+}
+
+.motorcycle-03 {
+  aspect-ratio: 800/515;
+  background-image: url('../img/motoshare/motorcycle-03@2x.png');
+  background-size: 100% 100%;
+}
+
+/* Full Width Image Section Template */
+.section-full-image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.full-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.full-image {
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Specific image implementations */
+.bike-image {
+  aspect-ratio: 2040/1078;
+  background-image: url('../img/motoshare/bike@2x.png');
+}
+
+.ocean-image {
+  aspect-ratio: 16/9; /* Default aspect ratio, update when you know the actual image dimensions */
+  background-image: url('../img/motoshare/ocean.png');
+}
+
+/* Rent Wizard Section */
+.section-rent-wizard {
+  background: #DADAE2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: flex-start;
+  padding: 80px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-rent-wizard, .section-before-after {
+    padding: var(--space-2xl) var(--space-xl);
+    gap: var(--space-xl);
+  }
+}
+
+.section-rent-wizard h2 {
+  position: relative;
+  flex-shrink: 0;
+  color: #101010;
+  text-align: center;
+  width: 100%;
+}
+
+.section-rent-wizard .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.section-rent-wizard .laptop-image {
+  aspect-ratio: 1714/938;
+  background-image: url('../img/motoshare/laptop@2x.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* MotoShare Background Colors */
+.motoshare .bg-grey {
+  background: #DADAE2 !important;
+}
+
+/* How I validated Ideas Section */
+.section-validated-ideas {
+  background: var(--grey-100, #F9F9F9);
+  box-shadow: 0 -46px 64px 0 rgba(0, 0, 0, 0.03) inset;
+  position: relative;
+}
+
+.section-validated-ideas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 788.557px;
+  height: 354.714px;
+  background-image: url('../img/motoshare/heatmap.png');
+  background-size: 100% 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-validated-ideas .text-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Helmet Image Section */
+.section-helmet-image {
+  background: #f9f9f9;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 0 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.helmet-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.helmet-image {
+  background-image: url('../img/motoshare/helmet@2x.png');
+  background-size: 100% 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 326px;
+  flex-shrink: 0;
+  width: 316px;
+}
+
+/* The Result Section */
+.section-result {
+  background: white;
+}
+
+.highlight-box-yellow {
+  background: #ffc93d;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.highlight-box-yellow .body-02-bold {
+  position: relative;
+  flex-shrink: 0;
+  color: #101010;
+  white-space: nowrap;
+}
+
+/* Remove section borders for MotoShare */
+.motoshare .section-text-image,
+.motoshare .section-title-desc-2col,
+.motoshare .section-title-2col-02 {
+  border-bottom: none !important;
+}
+
+.motoshare .bg-grey .section-text-image,
+.motoshare .bg-grey .section-title-desc-2col,
+.motoshare .bg-grey .section-title-2col-02 {
+  border-bottom: none !important;
+}

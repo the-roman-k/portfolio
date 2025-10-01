@@ -1,0 +1,207 @@
+/* =========================================================
+   TEAM EDUCATION PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Team Education Hero Section */
+.team-education-hero {
+  background: linear-gradient(199deg, #9DAEC1 0.66%, #F4FFFD 50.41%) !important;
+}
+
+@media (min-width: 1024px) {
+  .team-education-hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.team-education-hero .hero-content {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-2xl);
+}
+
+.team-education-hero .hero-image-content {
+  order: 1;
+  max-width: 400px;
+}
+
+.team-education-hero .hero-image-content img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.team-education-hero .hero-text-content {
+  order: 2;
+  flex: 1;
+}
+
+/* Complex Design Systems Section */
+.complex-design-systems-section {
+  background: linear-gradient(199deg, #9DAEC1 0.66%, #F4FFFD 50.41%) !important;
+}
+
+.complex-design-systems-section .image-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complex-design-systems-section .image-holder img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+/* Workshop Materials Section */
+.workshop-materials-section {
+  background: linear-gradient(199deg, #9DAEC1 0.66%, #F4FFFD 50.41%) !important;
+}
+
+.workshop-materials-section .text-content {
+  border-left: 24px solid #202032;
+  padding-left: 60px;
+}
+
+/* Practical Topics Section */
+.practical-topics-section {
+  background: linear-gradient(199deg, #9DAEC1 0.66%, #F4FFFD 50.41%) !important;
+}
+
+.practical-topics-section .text-content {
+  border-left: 24px solid #202032;
+  padding-left: 60px;
+}
+
+/* Exercises Playground Section */
+.exercises-playground-section {
+  background: #202032 !important;
+}
+
+.exercises-playground-section .text-content {
+  border-left: 24px solid var(--white);
+  padding-left: 60px;
+}
+
+.exercises-playground-section h2,
+.exercises-playground-section h5,
+.exercises-playground-section p,
+.exercises-playground-section li {
+  color: var(--white) !important;
+}
+
+/* Live Sessions Section */
+.live-sessions-section {
+  background: linear-gradient(199deg, #9DAEC1 0.66%, #F4FFFD 50.41%) !important;
+}
+
+.live-sessions-section .text-content {
+  border-left: 24px solid #202032;
+  padding-left: 60px;
+}
+
+/* Future AI Talk Section */
+.future-ai-talk-section {
+  background: linear-gradient(199deg, #9DAEC1 0.66%, #F4FFFD 50.41%) !important;
+}
+
+.future-ai-talk-section .ai-talk-header {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.future-ai-talk-section .ai-talk-image {
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.future-ai-talk-section .ai-talk-image img {
+  width: 100%;
+  height: auto;
+  max-height: 339px;
+  object-fit: contain;
+}
+
+.future-ai-talk-section .ai-talk-text {
+  flex: 1;
+}
+
+.future-ai-talk-section .ai-talk-text h1 {
+  font-size: var(--text-heading-01);
+  line-height: var(--line-heading-01);
+  margin-bottom: var(--space-xl);
+}
+
+.future-ai-talk-section .goal-column {
+  border-left: 24px solid #202032;
+  padding-left: 60px;
+  height: fit-content;
+}
+
+/* Other Knowledge Sharings Section */
+.other-knowledge-sharings-section {
+  background: url('../img/team-education/other-topics-bg.png') #C7D3DB;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+
+
+
+/* Typography Overrides for Responsive */
+@media (max-width: 1024px) {
+  .team-education-hero .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-lg);
+  }
+
+  .team-education-hero .hero-image-content {
+    order: 1;
+  }
+
+  .team-education-hero .hero-text-content {
+    order: 2;
+  }
+
+  .future-ai-talk-section .ai-talk-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-lg);
+  }
+
+  .future-ai-talk-section .ai-talk-image {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-education-hero .hero-image-content {
+    max-width: 250px;
+  }
+
+  .team-education-hero .hero-image-content img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .future-ai-talk-section .ai-talk-image {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Remove left borders and padding on small mobile screens */
+  .workshop-materials-section .text-content,
+  .practical-topics-section .text-content,
+  .exercises-playground-section .text-content,
+  .live-sessions-section .text-content,
+  .future-ai-talk-section .goal-column {
+    border-left: none;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,291 @@
+/* =========================================================
+   VENDOR PORTAL PAGE - Typography & Custom Styling
+   ========================================================= */
+
+/* Vendor Portal Hero Section */
+.section-project-hero-vertical {
+  background-image: url('../img/vendor-portal/hero-bg-light@2x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-project-hero-vertical .hero-text-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: center;
+  text-align: center;
+}
+
+.section-project-hero-vertical .hero-text-top h1,
+.section-project-hero-vertical .hero-text-top p {
+  color: var(--black);
+}
+
+.section-project-hero-vertical .hero-image-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl, 60px) 0;
+  width: 100%;
+}
+
+.section-project-hero-vertical .hero-image-bottom img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* My Role & Responsibilities Section */
+.section-title-2col-02 .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  width: 100%;
+}
+
+.section-title-2col-02 .columns {
+  display: flex;
+  gap: 120px;
+  width: 100%;
+}
+
+.section-title-2col-02 .column-01 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 375px;
+  width: 480px;
+  flex-shrink: 0;
+}
+
+.section-title-2col-02 .column-02 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 375px;
+  flex: 1;
+}
+
+.section-title-2col-02 h2,
+.section-title-2col-02 h4 {
+  color: #76614c;
+}
+
+.section-title-2col-02 .body-02,
+.section-title-2col-02 .body-03,
+.section-title-2col-02 .lead-text {
+  color: #342e1f;
+}
+
+.section-title-2col-02 ul {
+  color: #342e1f;
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-title-2col-02 ul li {
+  margin-bottom: 0;
+  margin-left: 27px;
+  position: relative;
+}
+
+.section-title-2col-02 ul li::before {
+  content: "•";
+  position: absolute;
+  left: -27px;
+}
+
+/* The Challenge Section */
+.section-title-desc-2col {
+  border-left: 16px solid #494643;
+}
+
+.section-title-desc-2col .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  width: 100%;
+}
+
+.section-title-desc-2col .columns {
+  display: flex;
+  gap: 120px;
+  width: 100%;
+}
+
+.section-title-desc-2col .column-01 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 375px;
+  width: 480px;
+  flex-shrink: 0;
+}
+
+.section-title-desc-2col .column-02 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 375px;
+  flex: 1;
+}
+
+.section-title-desc-2col h2,
+.section-title-desc-2col h4,
+.section-title-desc-2col .body-01,
+.section-title-desc-2col .body-02,
+.section-title-desc-2col .column-01,
+.section-title-desc-2col .column-02 {
+  color: #101010;
+}
+
+.section-title-desc-2col .body-02 p {
+  margin-bottom: var(--space-md);
+}
+
+.section-title-desc-2col .body-02 p:last-child {
+  margin-bottom: 0;
+}
+
+/* Text Image Sections - Vendor Portal specific backgrounds and colors */
+.section-text-image.bg-grey {
+  background: #eaeaea;
+  border-left: 16px solid #494643;
+}
+
+.section-text-image.bg-light-grey {
+  background: #f2f2f2;
+  border-left: 16px solid #342e1f;
+}
+
+.section-text-image h2 {
+  color: #76614c;
+}
+
+.section-text-image.bg-grey h2,
+.section-text-image.bg-light-grey h2,
+.section-text-image.bg-grey h5,
+.section-text-image.bg-light-grey h5 {
+  color: #342e1f;
+}
+
+.section-text-image .body-02 {
+  color: #342e1f;
+}
+
+.section-text-image .body-02 p {
+  margin-bottom: var(--space-md);
+}
+
+.section-text-image .body-02 p:last-child {
+  margin-bottom: 0;
+}
+
+.deliverables h5 {
+  color: #76614c;
+}
+
+.deliverables ul {
+  color: #342e1f;
+}
+
+/* The Result Section */
+.bg-result {
+  background: #e2e4e3 !important;
+  padding-bottom: 0 !important;
+}
+
+.bg-result h2 {
+  color: #342e1f;
+}
+
+.bg-result h4 {
+  color: #342e1f;
+}
+
+.bg-result .body-03 {
+  color: #342e1f;
+}
+
+.bg-result ul {
+  color: #342e1f;
+}
+
+/* Landscape Background Section */
+.section-landscape-bg {
+  width: 100%;
+  position: relative;
+}
+
+.section-landscape-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Information Architecture Section - Vendor Portal specific */
+.section-title-image-bottom {
+  background: #f2f2f2;
+  border-left: 16px solid #494643;
+  padding: var(--space-3xl) var(--space-3xl) 0 var(--space-3xl);
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .section-title-image-bottom {
+    padding: var(--space-2xl) var(--space-xl) 0 var(--space-xl);
+  }
+}
+
+.section-title-image-bottom h2 {
+  color: #342e1f;
+}
+
+.information-architecture-image {
+  aspect-ratio: 1828/967;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive design for Vendor Portal */
+@media (max-width: 1024px) {
+  .section-title-2col-02 .columns,
+  .section-title-desc-2col .columns {
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+
+  .section-title-2col-02 .column-01,
+  .section-title-2col-02 .column-02,
+  .section-title-desc-2col .column-01,
+  .section-title-desc-2col .column-02 {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .text-image-content {
+    flex-direction: column;
+  }
+
+  .text-content,
+  .image-content {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-project-hero-vertical {
+    min-height: unset;
+  }
+
+  .section-title-2col-02 .columns,
+  .section-title-desc-2col .columns {
+    gap: var(--space-xl);
+  }
+}
