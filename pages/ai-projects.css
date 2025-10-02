@@ -331,17 +331,36 @@
 
 /* Design Audit AI Tool Section */
 .design-audit-ai-tool-section {
-  background: url('../img/ai-projects/design-audit-tool-bg.png') #CAD8E2;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
 }
 
 .design-audit-ai-tool-section h1,
 .design-audit-ai-tool-section h2,
 .design-audit-ai-tool-section h3,
 .design-audit-ai-tool-section p {
-  color: var(--black) !important;
+  color: var(--white) !important;
+}
+
+.design-audit-ai-tool-section .hero-vertical-content {
+  position: relative;
+  z-index: 2;
+}
+
+.shader-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.shader-canvas-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Typography Overrides for Responsive */
