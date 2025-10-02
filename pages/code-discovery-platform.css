@@ -88,11 +88,6 @@
 }
 
 /* Responsive design for Code Discovery hero */
-@media (max-width: 1199px) {
-  .code-discovery-hero-section {
-    margin-top: 16px;
-  }
-}
 
 @media (max-width: 1024px) {
   .code-discovery-hero-section {
@@ -113,6 +108,7 @@
 @media (max-width: 768px) {
   .code-discovery-hero-section {
     padding: 16px 20px 40px 20px;
+    margin-top: 16px;
   }
 
   .code-discovery-hero-section{
