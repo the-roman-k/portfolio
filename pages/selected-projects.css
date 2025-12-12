@@ -2,144 +2,331 @@
    SELECTED PROJECTS PAGE - Typography & Custom Styling
    ========================================================= */
 
-/* Projects Hero Section */
-.section-projects-hero {
-  background: var(--white);
-  padding: var(--space-5xl) var(--space-3xl);
-}
-
-.projects-hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2xl);
-  text-align: center;
-  max-width: var(--content-max);
-  margin: 0 auto;
-}
-
 /* Projects Grid Section */
 .section-projects-grid {
   background: var(--grey-100);
-  padding: var(--space-3xl);
+  padding: 0;
 }
 
-/* Projects Grid - Flexbox Layout */
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xl);
-  max-width: var(--content-max);
-  margin: 0 auto;
+/* Full-width 2-column matrix */
+.projects-matrix {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
 }
 
-/* Project Card Wrapper - Makes entire card clickable */
-.project-card-wrapper {
-  text-decoration: none;
-  color: inherit;
-  flex: 0 0 calc(33.333% - var(--space-2xl));
-  transition: transform var(--transition);
-}
+/* Single tile */
+.project-tile {
+  --tile-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(245, 245, 245, 0.70));
+  --tile-text: var(--black);
+  --tile-title-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  --tile-img-shadow: rgba(0, 0, 0, 0.18);
+  --tile-glare: rgba(255, 255, 255, 0.35);
+  --tile-glare-2: rgba(255, 255, 255, 0.08);
+  --tile-font: var(--font-primary);
+  --tile-weight: var(--weight-black);
+  --tile-hover-glow: rgba(0, 0, 0, 0.18);
+  --tile-hover-spot: rgba(255, 255, 255, 0.22);
+  --tile-hover-spot-2: rgba(255, 255, 255, 0.08);
 
-.project-card-wrapper:hover {
-  transform: translateY(-4px);
-}
-
-/* Project Cards */
-.project-card {
-  background: var(--white);
-  border-radius: 16px;
-  overflow: hidden;
-  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  transition: box-shadow var(--transition);
-}
-
-.project-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-}
-
-.project-card-image {
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  min-height: min(520px, 46vh);
+  padding: var(--space-2xl);
+  text-decoration: none;
+  color: var(--tile-text);
+  background: var(--tile-gradient);
   overflow: hidden;
-  background: var(--grey-100);
-  padding: var(--space-lg);
+  transition: filter var(--transition-fast);
+}
+
+/* Flare / glance hover effect (no movement) */
+.project-tile::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    var(--tile-glare) 48%,
+    var(--tile-glare-2) 55%,
+    transparent 68%
+  );
+  transform: translateX(-60%) rotate(0deg);
+  opacity: 0;
+}
+
+.project-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(1200px 520px at 20% 15%, var(--tile-hover-spot), transparent 60%),
+    radial-gradient(900px 420px at 80% 85%, var(--tile-hover-spot-2), transparent 55%);
+  transition: opacity 140ms ease-out;
+}
+
+.project-tile:hover {
+  filter: saturate(1.06) contrast(1.03);
+  box-shadow: 0 18px 60px var(--tile-hover-glow);
+}
+
+.project-tile:hover::after {
+  opacity: 1;
+}
+
+.project-tile:hover::before {
+  opacity: 1;
+  transition: transform 420ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 120ms ease-out;
+  transform: translateX(60%) rotate(0deg);
+}
+
+.project-tile:focus-visible {
+  outline: 3px solid rgba(12, 81, 99, 0.35);
+  outline-offset: -3px;
+}
+
+.project-tile__preview {
+  width: min(560px, 88%);
+  aspect-ratio: 16 / 10;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
-.project-card-image img {
+.project-tile__preview img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform var(--transition);
+  background: none !important;
+  background-color: transparent !important;
+  transform: scale(1);
+  transition: transform var(--transition-fast);
 }
 
-.project-card:hover .project-card-image img {
-  transform: scale(1.05);
+.project-tile:hover .project-tile__preview img {
+  transform: scale(1.035);
 }
 
-.project-card-content {
-  padding: var(--space-lg);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.project-card-title {
+.project-tile__title {
   font-size: var(--text-heading-05);
-  font-weight: var(--weight-black);
-  line-height: 1.2;
-  text-transform: uppercase;
-  margin-bottom: var(--space-xs);
+  font-weight: var(--tile-weight);
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+  font-family: var(--tile-font);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  text-shadow: none;
 }
 
-.project-card-description {
-  font-size: var(--text-body-03);
-  line-height: 1.5;
-  color: var(--color-text-secondary);
-  flex-grow: 1;
+/* NDA placeholder tile */
+.project-tile--nda {
+  --tile-gradient: linear-gradient(135deg, #f6f6f6 0%, #dedede 100%);
+  --tile-text: var(--black);
+  --tile-font: var(--font-primary);
+  --tile-weight: 600;
+  --tile-hover-glow: rgba(0, 0, 0, 0.10);
+  cursor: default;
 }
 
-.project-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-top: var(--space-sm);
+.project-tile__nda-text {
+  max-width: min(720px, 92%);
+  text-align: center;
+  font-family: var(--tile-font);
+  font-weight: var(--tile-weight);
+  font-size: var(--text-body-02);
+  line-height: 1.35;
 }
 
-.project-card-tag {
-  background: var(--grey-100);
-  padding: var(--space-xxs) var(--space-xs);
-  border-radius: 4px;
-  font-size: var(--text-small);
-  font-weight: var(--weight-medium);
-  color: var(--color-text-secondary);
+.project-tile__nda-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-md);
+  padding: 14px 22px;
+  text-decoration: none;
+  font-family: var(--tile-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--white);
+  background: rgba(16, 16, 16, 0.92);
+  border-radius: 0;
+  transition: filter var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+}
+
+.project-tile__nda-cta:hover {
+  background: var(--yellow-400);
+  color: var(--black);
+  filter: none;
+}
+
+.project-tile__nda-cta:active {
+  transform: none;
+}
+
+.project-tile__nda-cta:focus-visible {
+  outline: 3px solid rgba(12, 81, 99, 0.35);
+  outline-offset: 3px;
+}
+
+/* Don’t make the NDA tile feel clickable */
+.project-tile--nda:hover {
+  filter: none;
+  box-shadow: none;
+}
+.project-tile--nda:hover::before,
+.project-tile--nda:hover::after {
+  opacity: 0;
+}
+.project-tile--nda:hover .project-tile__preview img {
+  transform: none;
+}
+
+/* Gradients only (project-specific) + accessible text color */
+.project-tile--healthcare {
+  --tile-gradient: linear-gradient(135deg, #4B50EE 0%, #4043C7 100%);
+  --tile-text: var(--white);
+  --tile-title-shadow: 0 2px 12px rgba(0, 0, 0, 0.30);
+  --tile-img-shadow: rgba(0, 0, 0, 0.42);
+  --tile-glare: rgba(255, 255, 255, 0.42);
+  --tile-glare-2: rgba(255, 255, 255, 0.12);
+  --tile-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --tile-weight: 900;
+  --tile-hover-glow: rgba(75, 80, 238, 0.45);
+  --tile-hover-spot: rgba(255, 255, 255, 0.24);
+  --tile-hover-spot-2: rgba(255, 255, 255, 0.10);
+}
+.project-tile--code-discovery {
+  --tile-gradient: linear-gradient(135deg, #0B0C19 0%, #342636 100%);
+  --tile-text: var(--white);
+  --tile-title-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+  --tile-img-shadow: rgba(0, 0, 0, 0.55);
+  --tile-glare: rgba(255, 255, 255, 0.34);
+  --tile-glare-2: rgba(255, 255, 255, 0.10);
+  --tile-font: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Matches .code-discovery-hero-section h1 { font-weight: 500; } */
+  --tile-weight: 500;
+  --tile-hover-glow: rgba(0, 0, 0, 0.55);
+  --tile-hover-spot: rgba(255, 255, 255, 0.18);
+  --tile-hover-spot-2: rgba(255, 255, 255, 0.06);
+}
+.project-tile--motoshare {
+  --tile-gradient: linear-gradient(135deg, #7C7D87 0%, #272732 100%);
+  --tile-text: var(--white);
+  --tile-title-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --tile-img-shadow: rgba(0, 0, 0, 0.45);
+  --tile-glare: rgba(255, 255, 255, 0.34);
+  --tile-glare-2: rgba(255, 255, 255, 0.10);
+  --tile-font: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --tile-weight: 900;
+  --tile-hover-glow: rgba(0, 0, 0, 0.35);
+}
+.project-tile--taxation {
+  --tile-gradient: linear-gradient(135deg, #FCB859 0%, #FB982B 100%);
+  --tile-text: var(--black);
+  --tile-title-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  --tile-img-shadow: rgba(0, 0, 0, 0.22);
+  --tile-glare: rgba(255, 255, 255, 0.55);
+  --tile-glare-2: rgba(255, 255, 255, 0.18);
+  --tile-font: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Matches .taxation-hero-section h1 { font-weight: var(--weight-bold); } */
+  --tile-weight: 700;
+  --tile-hover-glow: rgba(251, 152, 43, 0.40);
+}
+.project-tile--vendor-portal {
+  --tile-gradient: linear-gradient(135deg, #EBEDED 0%, #C1B3A7 100%);
+  --tile-text: var(--black);
+  --tile-title-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  --tile-img-shadow: rgba(0, 0, 0, 0.20);
+  --tile-glare: rgba(255, 255, 255, 0.55);
+  --tile-glare-2: rgba(255, 255, 255, 0.18);
+  --tile-font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --tile-weight: 900;
+  --tile-hover-glow: rgba(0, 0, 0, 0.22);
+  --tile-hover-spot: rgba(255, 255, 255, 0.28);
+  --tile-hover-spot-2: rgba(255, 255, 255, 0.10);
+}
+.project-tile--vehicle-tracking {
+  --tile-gradient: linear-gradient(135deg, #04303E 0%, #04303E 100%);
+  --tile-text: var(--white);
+  --tile-title-shadow: 0 2px 12px rgba(0, 0, 0, 0.38);
+  --tile-img-shadow: rgba(0, 0, 0, 0.55);
+  --tile-glare: rgba(255, 255, 255, 0.28);
+  --tile-glare-2: rgba(255, 255, 255, 0.08);
+  --tile-font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --tile-weight: 900;
+  --tile-hover-glow: rgba(4, 48, 62, 0.55);
+  --tile-hover-spot: rgba(255, 255, 255, 0.16);
+  --tile-hover-spot-2: rgba(255, 255, 255, 0.06);
+}
+.project-tile--ai-projects {
+  /* Reuse the AI Projects page hero gradient */
+  --tile-gradient: linear-gradient(56deg, #6CEDEF 10.29%, #2A47A0 111.94%);
+  /* Matches AI projects hero typography (black) */
+  --tile-text: var(--black);
+  --tile-title-shadow: 0 1px 0 rgba(255, 255, 255, 0.22);
+  --tile-img-shadow: rgba(0, 0, 0, 0.20);
+  --tile-glare: rgba(255, 255, 255, 0.55);
+  --tile-glare-2: rgba(255, 255, 255, 0.18);
+  --tile-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --tile-weight: 900;
+  --tile-hover-glow: rgba(42, 71, 160, 0.35);
+  --tile-hover-spot: rgba(255, 255, 255, 0.28);
+  --tile-hover-spot-2: rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-tile,
+  .project-tile::before,
+  .project-tile::after,
+  .project-tile:hover::before,
+  .project-tile__preview img,
+  .project-tile:hover .project-tile__preview img {
+    transition: none !important;
+    animation: none !important;
+  }
+  .project-tile::before {
+    display: none;
+  }
+  .project-tile::after {
+    display: none;
+  }
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .project-card-wrapper {
-    flex: 0 0 calc(50% - var(--space-2xl));
-  }
-}
-
 @media (max-width: 768px) {
-  .project-card-wrapper {
-    flex: 0 0 100%;
+  .projects-matrix {
+    grid-template-columns: 1fr;
   }
 
-  .section-projects-hero {
-    padding: var(--space-3xl) var(--space-lg);
+  .project-tile {
+    min-height: 38vh;
+    padding: var(--space-xl);
   }
 
-  .section-projects-grid {
-    padding: var(--space-2xl) var(--space-lg);
-  }
-
-  .projects-grid {
-    gap: var(--space-xl);
+  .project-tile__preview {
+    width: min(680px, 96%);
   }
 }
