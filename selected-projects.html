@@ -17,7 +17,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Load the same font families used across individual project pages -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -94,158 +95,60 @@
     <main>
         <!-- Projects Grid Section -->
         <section class="section-projects-grid">
-                <div class="projects-intro">
-                    <h2>Selected Projects</h2>
-                    <p>Each project represents a unique challenge solved through strategic design thinking, user research, and collaborative development.</p>
-                </div>
-                
-                <div class="projects-grid">
-                    <!-- Healthcare Enterprise -->
-                    <a href="healthcare-enterprise.html" class="project-card-wrapper">
-                        <div class="project-card">
-                            <div class="project-card-image">
-                                <img src="img/healthcare-enterprise/ui-mockups@2x.png" alt="Healthcare Enterprise Platform">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">Enterprise Healthcare</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>Healthcare Enterprise Platform</h5>
-                                <p class="body-02">A comprehensive healthcare management system designed to streamline patient care, improve operational efficiency, and enhance user experience for healthcare professionals.</p>
-                                <div class="project-tags">
-                                    <span class="tag">User Research</span>
-                                    <span class="tag">Service Design</span>
-                                    <span class="tag">Enterprise UX</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="projects-matrix" aria-label="Selected projects">
+                    <a href="healthcare-enterprise.html" class="project-tile project-tile--healthcare">
+                        <span class="project-tile__preview">
+                            <img src="img/healthcare-enterprise/project-review-healthcare.png" alt="Healthcare Enterprise preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">Healthcare Enterprise</span>
                     </a>
 
-                    <!-- Code Discovery Platform -->
-                    <a href="code-discovery-platform.html" class="project-card-wrapper">
-                        <div class="project-card">
-                            <div class="project-card-image">
-                                <img src="img/code-discovery-platform/code-discovery-hero-image.png" alt="Code Discovery Platform">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">Developer Tools</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>Code Discovery Platform</h5>
-                                <p class="body-02">An innovative platform that helps developers discover, understand, and integrate code solutions through intelligent search and collaborative features.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Product Strategy</span>
-                                    <span class="tag">Information Architecture</span>
-                                    <span class="tag">Developer Experience</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="code-discovery-platform.html" class="project-tile project-tile--code-discovery">
+                        <span class="project-tile__preview">
+                            <img src="img/code-discovery-platform/project-preview-code-discovery.png" alt="Code Discovery Platform preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">Code Discovery Platform</span>
                     </a>
 
-                    <!-- MotoShare -->
-                    <a href="motoshare.html" class="project-card-wrapper">
-                        <div class="project-card">
-                            <div class="project-card-image">
-                                <img src="img/motoshare/motoshare-hero-image.png" alt="MotoShare App">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">Renting Platform</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>MotoShare</h5>
-                                <p class="body-02">A motorcycle sharing platform that connects riders with available bikes, featuring intuitive booking, payment, and community features.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Mobile Design</span>
-                                    <span class="tag">User Testing</span>
-                                    <span class="tag">Sharing Economy</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="motoshare.html" class="project-tile project-tile--motoshare">
+                        <span class="project-tile__preview">
+                            <img src="img/motoshare/motoshare-hero-image.png" alt="MotoShare preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">MotoShare</span>
                     </a>
 
-                    <!-- Vendor Portal -->
-                    <a href="vendor-portal.html" class="project-card-wrapper">
-                        <div class="project-card">
-                            <div class="project-card-image">
-                                <img src="img/vendor-portal/product mockups.png" alt="Vendor Portal">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">B2B Platform</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>Vendor Portal</h5>
-                                <p class="body-02">A comprehensive vendor management system that streamlines procurement processes and enhances collaboration between businesses and suppliers.</p>
-                                <div class="project-tags">
-                                    <span class="tag">B2B UX</span>
-                                    <span class="tag">Process Design</span>
-                                    <span class="tag">Dashboard Design</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="taxation-platform.html" class="project-tile project-tile--taxation">
+                        <span class="project-tile__preview">
+                            <img src="img/taxation-platform/mackbook.png" alt="Taxation Platform preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">Taxation Platform</span>
                     </a>
 
-                    <!-- Vehicle Tracking System -->
-                    <a href="vehicle-tracking-system.html" class="project-card-wrapper">
-                        <div class="project-card">
-                            <div class="project-card-image">
-                                <img src="img/vehicle-tracking-system/final ui.png" alt="Vehicle Tracking System">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">Fleet Management</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>Vehicle Tracking System</h5>
-                                <p class="body-02">A real-time fleet management solution that provides comprehensive tracking, monitoring, and analytics for vehicle operations.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Real-time Data</span>
-                                    <span class="tag">Analytics Dashboard</span>
-                                    <span class="tag">IoT Integration</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="vendor-portal.html" class="project-tile project-tile--vendor-portal">
+                        <span class="project-tile__preview">
+                            <img src="img/vendor-portal/product mockups.png" alt="Vendor Portal preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">Vendor Portal</span>
                     </a>
 
-                    <!-- Taxation Platform -->
-                    <a href="taxation-platform.html" class="project-card-wrapper">
-                        <div class="project-card">
-                            <div class="project-card-image">
-                                <img src="img/taxation-platform/mackbook.png" alt="Taxation Platform">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">Enterprise Platform</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>Taxation Platform</h5>
-                                <p class="body-02">Comprehensive tax management system designed for enterprise clients, featuring automated calculations, compliance tracking, and intuitive reporting interfaces.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Enterprise UX</span>
-                                    <span class="tag">Process Automation</span>
-                                    <span class="tag">Compliance Design</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="vehicle-tracking-system.html" class="project-tile project-tile--vehicle-tracking">
+                        <span class="project-tile__preview">
+                            <img src="img/vehicle-tracking-system/final ui.png" alt="Vehicle Tracking System preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">Vehicle Tracking System</span>
                     </a>
 
-                    <!-- AI Projects Overview -->
-                    <a href="ai-projects.html" class="project-card-wrapper">
-                        <div class="project-card project-card--highlight">
-                            <div class="project-card-image">
-                                <img src="img/ai-projects/ai-robot.png" alt="AI Projects Collection">
-                                <div class="project-card-overlay">
-                                    <div class="project-card-category">AI & Innovation</div>
-                                </div>
-                            </div>
-                            <div class="project-card-content">
-                                <h5>AI Projects Collection</h5>
-                                <p class="body-02">Exploring the intersection of artificial intelligence and design, creating innovative solutions that leverage cutting-edge technology.</p>
-                                <div class="project-tags">
-                                    <span class="tag">AI Integration</span>
-                                    <span class="tag">Innovation</span>
-                                    <span class="tag">Future Tech</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="ai-projects.html" class="project-tile project-tile--ai-projects">
+                        <span class="project-tile__preview">
+                            <img src="img/ai-projects/ai-robot.png" alt="AI Projects preview" loading="lazy" decoding="async">
+                        </span>
+                        <span class="project-tile__title">AI Projects</span>
                     </a>
+
+                    <div class="project-tile project-tile--nda" role="note" aria-label="Additional projects under NDA">
+                        <span class="project-tile__nda-text">Many other project are under NDA and could be discussed separately</span>
+                        <a class="project-tile__nda-cta" href="contact.html" aria-label="Contact me about NDA projects">Contact me</a>
+                    </div>
                 </div>
         </section>
     </main>
