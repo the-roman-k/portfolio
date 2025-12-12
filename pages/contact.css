@@ -43,6 +43,66 @@
   color: var(--grey-800);
 }
 
+/* Contact CTA Button */
+.contact-cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--black);
+  color: var(--white) !important;
+  text-decoration: none;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.01em;
+  overflow: hidden;
+  transition: filter var(--transition-fast);
+}
+
+.contact-cta-button::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.38) 48%,
+    rgba(255, 255, 255, 0.10) 55%,
+    transparent 68%
+  );
+  transform: translateX(-60%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-cta-button:hover {
+  filter: brightness(1.05);
+}
+
+.contact-cta-button:hover::before {
+  opacity: 1;
+  transition: transform 420ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 120ms ease-out;
+  transform: translateX(60%);
+}
+
+.contact-cta-button:focus-visible {
+  outline: 3px solid rgba(12, 81, 99, 0.35);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-cta-button,
+  .contact-cta-button::before,
+  .contact-cta-button:hover::before {
+    transition: none !important;
+    animation: none !important;
+  }
+  .contact-cta-button::before {
+    display: none;
+  }
+}
+
 /* Scroll Animation */
 .scroll-animation {
   width: 48px;
