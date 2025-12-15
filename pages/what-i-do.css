@@ -72,7 +72,7 @@
 .what-i-do-hero .tooltip-term:focus-visible {
   color: rgba(17, 17, 17, 1);
   border-bottom-color: rgba(17, 17, 17, 0.9);
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--yellow-400);
 }
 
 .what-i-do-hero .tooltip-term::after {
