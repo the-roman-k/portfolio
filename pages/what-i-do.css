@@ -4,14 +4,12 @@
 
 /* What I Do Hero Section */
 .what-i-do-hero {
-  /* Static fallback while WebGL loads (approx. the shader palette) */
-  background-color: #000000;
+  /* Static fallback while WebGL loads (paper-like background) */
+  background-color: #f2f4f6;
   background-image:
-    radial-gradient(900px 520px at 18% 45%, rgba(0, 178, 255, 0.55), rgba(0, 0, 0, 0) 62%),
-    radial-gradient(760px 520px at 55% 45%, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0) 58%),
-    radial-gradient(880px 620px at 78% 55%, rgba(255, 178, 26, 0.45), rgba(0, 0, 0, 0) 60%),
-    radial-gradient(780px 560px at 92% 40%, rgba(204, 13, 0, 0.35), rgba(0, 0, 0, 0) 60%),
-    linear-gradient(180deg, rgba(0, 5, 32, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    radial-gradient(900px 520px at 22% 45%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(760px 520px at 70% 55%, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(180deg, #f7f9fb 0%, #eef1f4 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +25,7 @@
 
 /* When WebGL background is ready, ensure we don't show the PNG fallback (we use CSS gradient instead). */
 .what-i-do-hero[data-webgl="on"] {
-  background-color: transparent;
+  background-color: #f2f4f6;
 }
 
 /* WebGL canvas that fills the hero section */
@@ -54,9 +52,7 @@
 
 /* Professional title shadow for readability over animated background */
 .what-i-do-hero .what-i-do-content h1 {
-  text-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.55),
-    0 16px 40px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
   margin-bottom: var(--space-2xl);
 }
 
@@ -65,8 +61,8 @@
   position: relative;
   display: inline;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.94);
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.55);
+  color: rgba(17, 17, 17, 0.92);
+  border-bottom: 1px dotted rgba(17, 17, 17, 0.55);
   cursor: help;
   transition: color var(--transition-fast), border-color var(--transition-fast);
   outline: none;
@@ -74,8 +70,9 @@
 
 .what-i-do-hero .tooltip-term:hover,
 .what-i-do-hero .tooltip-term:focus-visible {
-  color: var(--yellow-400);
-  border-bottom-color: rgba(255, 201, 61, 0.9);
+  color: rgba(17, 17, 17, 1);
+  border-bottom-color: rgba(17, 17, 17, 0.9);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 .what-i-do-hero .tooltip-term::after {
@@ -88,15 +85,16 @@
   max-width: min(320px, 72vw);
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(10, 10, 10, 0.92);
-  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.94);
+  color: rgba(17, 17, 17, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: 0;
   text-transform: none;
   text-align: left;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -111,7 +109,7 @@
   transform: translateX(-50%);
   border: 6px solid transparent;
   border-bottom: none;
-  border-top-color: rgba(10, 10, 10, 0.92);
+  border-top-color: rgba(255, 255, 255, 0.94);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -126,15 +124,15 @@
   visibility: visible;
 }
 
-/* Hero text should be white for readability over the animated background */
+/* Hero text: black theme */
 .what-i-do-hero .what-i-do-content,
 .what-i-do-hero .what-i-do-content :is(h1, h2, h3, h4, h5, h6, p) {
-  color: var(--white);
+  color: #111;
 }
 
-/* Hero highlight should be yellow (glossy container) */
+/* Hero highlight: black theme */
 .what-i-do-hero .highlight-box p {
-  color: var(--yellow-400);
+  color: #111;
 }
 
 @media (max-width: 768px) {
@@ -203,15 +201,15 @@
 
 /* Glossy / glass highlight treatment for the hero only */
 .what-i-do-hero .highlight-box {
-  background: rgba(10, 10, 10, 0.28);
+  background: rgba(255, 255, 255, 0.72);
   border-radius: 16px;
   padding: 14px 18px;
   margin-top: var(--space-2xl) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    0 10px 30px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
   position: relative;
   overflow: hidden;
 }
@@ -223,18 +221,18 @@
   background: linear-gradient(
     120deg,
     transparent 18%,
-    rgba(255, 255, 255, 0.18) 42%,
-    rgba(255, 255, 255, 0.06) 52%,
+    rgba(255, 255, 255, 0.65) 42%,
+    rgba(255, 255, 255, 0.18) 52%,
     transparent 70%
   );
-  opacity: 0.7;
+  opacity: 0.75;
   pointer-events: none;
 }
 
 .what-i-do-hero .highlight-box p {
   position: relative;
   z-index: 1;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   font-weight: var(--weight-regular);
 }
 
