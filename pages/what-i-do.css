@@ -46,7 +46,10 @@
 .what-i-do-hero .what-i-do-content {
   position: relative;
   z-index: 1;
-  gap: var(--space-xl);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: var(--space-2xl);
 }
 
 /* Professional title shadow for readability over animated background */
@@ -54,6 +57,73 @@
   text-shadow:
     0 2px 10px rgba(0, 0, 0, 0.55),
     0 16px 40px rgba(0, 0, 0, 0.35);
+  margin-bottom: var(--space-2xl);
+}
+
+/* Inline tooltip highlights (dotted underline + hover/focus tooltip) */
+.what-i-do-hero .tooltip-term {
+  position: relative;
+  display: inline;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.55);
+  cursor: help;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  outline: none;
+}
+
+.what-i-do-hero .tooltip-term:hover,
+.what-i-do-hero .tooltip-term:focus-visible {
+  color: var(--yellow-400);
+  border-bottom-color: rgba(255, 201, 61, 0.9);
+}
+
+.what-i-do-hero .tooltip-term::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(320px, 72vw);
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(10, 10, 10, 0.92);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.what-i-do-hero .tooltip-term::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 4px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom: none;
+  border-top-color: rgba(10, 10, 10, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.what-i-do-hero .tooltip-term:hover::after,
+.what-i-do-hero .tooltip-term:focus-visible::after,
+.what-i-do-hero .tooltip-term:hover::before,
+.what-i-do-hero .tooltip-term:focus-visible::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Hero text should be white for readability over the animated background */
@@ -62,9 +132,9 @@
   color: var(--white);
 }
 
-/* Exception: keep the highlighted sentence readable on yellow */
+/* Hero highlight should be yellow (glossy container) */
 .what-i-do-hero .highlight-box p {
-  color: var(--black);
+  color: var(--yellow-400);
 }
 
 @media (max-width: 768px) {
@@ -103,7 +173,7 @@
 }
 
 .section-image-bottom-text .what-i-do-content {
-  max-width: var(--content-max);
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   gap: var(--space-xl);
@@ -129,6 +199,43 @@
 
 .highlight-box p {
   margin: 0;
+}
+
+/* Glossy / glass highlight treatment for the hero only */
+.what-i-do-hero .highlight-box {
+  background: rgba(10, 10, 10, 0.28);
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-top: var(--space-2xl) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.what-i-do-hero .highlight-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 18%,
+    rgba(255, 255, 255, 0.18) 42%,
+    rgba(255, 255, 255, 0.06) 52%,
+    transparent 70%
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.what-i-do-hero .highlight-box p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  font-weight: var(--weight-regular);
 }
 
 /* Text Highlight */
