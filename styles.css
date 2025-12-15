@@ -145,6 +145,8 @@
   }
   
   img { max-width: 100%; height: auto; display: block; }
+  /* Utility: opt out of section child max-width constraints (used for full-bleed backgrounds like hero canvases) */
+  .full-bleed { max-width: none !important; width: 100% !important; }
   
   ul { list-style: disc; padding-left: 30px; }
   
@@ -1873,9 +1875,9 @@
     flex-direction: column;
     gap: var(--content-gap);
   }
-  .section-image-bottom-text > *:not(.content-container),
-  .section-title-image-bottom > *:not(.content-container),
-  .section-title-text-left-image-right > *:not(.content-container) {
+  .section-image-bottom-text > *:not(.content-container):not(.full-bleed),
+  .section-title-image-bottom > *:not(.content-container):not(.full-bleed),
+  .section-title-text-left-image-right > *:not(.content-container):not(.full-bleed) {
     max-width: var(--content-max);
     margin-left: auto;
     margin-right: auto;

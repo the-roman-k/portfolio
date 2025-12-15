@@ -20,7 +20,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="typography/dm-serif-dm-sans.css">
+    <link rel="stylesheet" href="typography/inter.css">
     <link rel="stylesheet" href="pages/what-i-do.css">
 </head>
 <body>
@@ -78,10 +78,8 @@
     <main>
         <!-- What I Do Hero Section -->
         <section class="section-image-bottom-text what-i-do-hero">
+            <canvas class="hero-webgl-bg full-bleed" id="whatIDoHeroCanvas" aria-hidden="true"></canvas>
             <div class="what-i-do-content">
-                <div class="what-i-do-image">
-                    <img src="img/what-i-do/what-i-do@2x.png" alt="What I Do">
-                </div>
                 <h1 class="text-center">What I do</h1>
                 <p class="lead-text">I am Designer who helps companies to execute best digital (and sometimes other) solutions for products through deep research, proper problem framing, matching business and end user needs through interactive prototypes and applications design.</p>
                 <p class="body-01 text-center">I conduct workshops, map processes, build information architecture,<br>set up design systems and processes, execute user interfaces, guidelines and design frameworks.</p>
@@ -484,5 +482,6 @@
 
     <script src="navigation.js"></script>
     <script src="lightbox.js"></script>
+    <script src="js/what-i-do-hero-bg.js" defer></script>
 </body>
 </html>
