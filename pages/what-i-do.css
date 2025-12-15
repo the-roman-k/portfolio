@@ -135,13 +135,6 @@
   color: #111;
 }
 
-@media (max-width: 768px) {
-  .what-i-do-hero {
-    min-height: auto;
-    padding-top: var(--space-4xl);
-    padding-bottom: var(--space-4xl);
-  }
-}
 
 /* What I Do Content Section */
 .what-i-do-content {
@@ -236,6 +229,22 @@
   font-weight: var(--weight-regular);
 }
 
+@media (max-width: 768px) {
+  .what-i-do-hero {
+    min-height: auto;
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
+  }
+
+  /* Tighter vertical rhythm on mobile */
+  .what-i-do-hero .what-i-do-content h1 {
+    margin-bottom: 0;
+  }
+
+  .what-i-do-hero .highlight-box {
+    margin-top: 0 !important;
+  }
+}
 /* Text Highlight */
 .text-highlight {
   color: var(--yellow-400);
