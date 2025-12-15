@@ -51,35 +51,38 @@
 
       float t = u_time * u_speed;
 
-      float wave = sin(st.x * u_wave_freq + t) * u_wave_amp
-        + sin(st.y * (u_wave_freq * 1.5) + t * 0.7) * (u_wave_amp * 0.25);
+      float w1 = sin(st.x * u_wave_freq + t);
+      float w2 = sin(st.y * (u_wave_freq * 1.5) + t * 0.7);
+      float wave = w1 * u_wave_amp + w2 * (u_wave_amp * 0.25);
 
       float linePosition = st.y - 0.5;
 
-      float distToMouse = length(st - mouse);
-      float mousePull = exp(-2.5 * distToMouse);
+      vec2 diff = st - mouse;
+      float distSq = dot(diff, diff);
+      float mousePull = 1.0 / (1.0 + distSq * 10.0);
       linePosition -= (mouse.y - 0.5) * mousePull * u_mouse_force;
 
       float d = abs(linePosition - wave * 0.3);
 
-      float glow = u_glow_strength / (d + 0.005);
-      glow = clamp(glow, 0.0, 2.5) + exp(-d * 4.0) * 0.5;
+      float width = u_glow_strength;
+      float intensity = 1.0 - smoothstep(0.0, width, d);
+      intensity = intensity * intensity;
 
-      vec3 c_deepBlue = vec3(0.0, 0.02, 0.2);
-      vec3 c_cyan     = vec3(0.0, 0.7, 1.0);
-      vec3 c_white    = vec3(1.0, 1.0, 1.2);
-      vec3 c_gold     = vec3(1.0, 0.7, 0.1);
-      vec3 c_red      = vec3(0.8, 0.05, 0.0);
+      vec3 c_ink = vec3(0.05, 0.05, 0.05);
+      vec3 c_paper = vec3(0.95, 0.96, 0.97);
 
-      float colorPos = st.x * 0.7 + sin(t) * 0.15;
+      float colorPos = st.x * 0.5 + sin(t) * 0.1;
 
-      vec3 color = c_deepBlue;
-      color = mix(color, c_cyan, smoothstep(0.0, 0.3, colorPos));
-      color = mix(color, c_white, smoothstep(0.3, 0.45, colorPos));
-      color = mix(color, c_gold, smoothstep(0.5, 0.65, colorPos));
-      color = mix(color, c_red, smoothstep(0.7, 1.1, colorPos));
+      if (colorPos < 0.3) {
+        c_ink = mix(vec3(0.1, 0.15, 0.2), vec3(0.0, 0.0, 0.0), smoothstep(0.0, 0.3, colorPos));
+      } else if (colorPos > 0.6) {
+        c_ink = mix(vec3(0.0, 0.0, 0.0), vec3(0.15, 0.1, 0.05), smoothstep(0.6, 1.0, colorPos));
+      } else {
+        c_ink = vec3(0.0, 0.0, 0.0);
+      }
 
-      gl_FragColor = vec4(color * glow + vec3(0.01, 0.02, 0.08), 1.0);
+      vec3 finalColor = mix(c_paper, c_ink, intensity);
+      gl_FragColor = vec4(finalColor, 1.0);
     }
   `;
 
@@ -141,7 +144,7 @@
     speed: 0.16,
     amp: 1.0,
     freq: 2.0,
-    glow: 0.019,
+    glow: 0.05,
     mouseForce: 1.7,
   };
 
