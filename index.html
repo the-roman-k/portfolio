@@ -83,36 +83,36 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="section-project-hero index-hero">
-            <div id="stars"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
-            <div id="stars4"></div>
-            <div id="stars5"></div>
-            <div id="stars6"></div>
-            <div class="hero-content">
-                <div class="hero-text-content">
-                    <div class="rk-logo">
-                        <img src="img/index/rk-logo.svg" alt="RK Logo">
-                    </div>
-                    <h1>Roman<br>Kryzhanovskyi</h1>
-                    <div class="hero-titles">
-                        <span>User Experience Designer</span>
-                        <span>/</span>
-                        <span>Product Designer</span>
-                        <span>/</span>
-                        <span>Service Designer</span>
-                        <span>/</span>
-                        <span>Design System Designer</span>
-                        <span>/</span>
-                        <span>UI/UX</span>
-                        <span>/</span>
-                        <span>Prototyping</span>
-                        <span>/</span>
-                        <span>Problem Solver</span>
-                        <span>/</span>
-                        <span class="highlight-box--small">AI Adapter</span>
+        <!-- Hero Section (RK / Figma: section-hero-rk) -->
+        <section class="section-hero-rk" aria-label="Introduction">
+            <div class="hero-rk__content">
+                <div class="hero-rk__logo" aria-hidden="true">
+                    <img src="img/index/rk-logo.svg" alt="">
+                </div>
+
+                <p class="hero-rk__title">
+                    <span class="hero-rk__title-main">Hi, I’m Roman</span><br><span class="hero-rk__title-main">Kryzhanovskyi – </span>
+                    <span class="hero-rk__flip" data-hero-rk-flip="" data-words="user experience|product|service|design systems|AI products|UX|user interface|applications" aria-label="Rotating specialty">service</span>
+                    <br>
+                    <span class="hero-rk__title-main">designer</span>
+                </p>
+
+                <div class="hero-rk__cards" aria-label="Highlights">
+                    <div class="hero-rk__cards-track" role="list">
+                        <div class="hero-rk__card" role="listitem">Fortune 500 Companies</div>
+                        <div class="hero-rk__card" role="listitem">100% Project Completion Rate</div>
+                        <div class="hero-rk__card" role="listitem">10+ Years of Experience</div>
+                        <div class="hero-rk__card" role="listitem">30+ Teams Collaboration</div>
+                        <div class="hero-rk__card" role="listitem">10+ Designers Leading</div>
+                        <div class="hero-rk__card" role="listitem">UX Design</div>
+                        <div class="hero-rk__card" role="listitem">Problem Solving</div>
+                        <div class="hero-rk__card" role="listitem">Product Design</div>
+                        <div class="hero-rk__card" role="listitem">User Interface Design</div>
+                        <div class="hero-rk__card" role="listitem">Design Systems</div>
+                        <div class="hero-rk__card" role="listitem">Web Applications</div>
+                        <div class="hero-rk__card" role="listitem">Mobile Apps</div>
+                        <div class="hero-rk__card" role="listitem">AI Integration</div>
+                        <div class="hero-rk__card" role="listitem">AI Design processes<br>&amp; Automatisation</div>
                     </div>
                 </div>
             </div>
@@ -504,17 +504,7 @@
             </div>
         </section>
 
-        <!-- AI Robot Section -->
-        <section class="section-image-bottom-text bg-white">
-            <div class="image-container">
-                <img src="img/index/ai-robot.png" alt="AI Robot" class="ai-robot-image">
-            </div>
-            <div class="text-content">
-                <div class="text-section">
-                    <h2 class="text-center">My current approach turns into <span class="ai-highlight">AI-driven</span></h2>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <!-- Footer -->
@@ -526,5 +516,6 @@
     </footer>
 
     <script src="navigation.js"></script>
+    <script src="js/hero-rk.js"></script>
 </body>
 </html>

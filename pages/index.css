@@ -200,3 +200,167 @@
         gap: var(--space-xl);
     }
 }
+
+/* =========================================================
+   HERO RK (Figma: section-hero-rk / node 4271:29576)
+   ========================================================= */
+
+.section-hero-rk {
+    background: var(--grey-100, #f9f9f9);
+    padding: var(--space-2xl) var(--space-3xl); /* 60 / 80 */
+    position: relative;
+    overflow: hidden;
+}
+
+.section-hero-rk::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 -46px 64px rgba(0, 0, 0, 0.03);
+}
+
+.hero-rk__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl); /* 60 */
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-rk__logo {
+    width: 76px;
+    height: 76px;
+    display: block;
+}
+
+.hero-rk__logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hero-rk__title {
+    font-family: var(--font-primary, 'DM Sans', sans-serif);
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: -0.05em;
+    color: var(--black, #101010);
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.hero-rk__title-main {
+    font-family: var(--font-primary, 'DM Sans', sans-serif);
+    font-weight: 600;
+}
+
+.hero-rk__flip {
+    display: inline-block;
+    font-family: var(--font-serif, 'DM Serif Text', serif);
+    font-style: italic;
+    font-weight: 400;
+    transform-origin: 50% 60%;
+    will-change: transform, opacity;
+}
+
+/* Flip animation states */
+.hero-rk__flip.is-leaving {
+    animation: heroRkFlipOut 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hero-rk__flip.is-entering {
+    animation: heroRkFlipIn 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes heroRkFlipOut {
+    from { transform: rotateX(0deg); opacity: 1; }
+    to { transform: rotateX(90deg); opacity: 0; }
+}
+
+@keyframes heroRkFlipIn {
+    from { transform: rotateX(-90deg); opacity: 0; }
+    to { transform: rotateX(0deg); opacity: 1; }
+}
+
+/* Cards row: horizontally scrollable (especially important for smaller viewports) */
+.hero-rk__cards {
+    /* Full-bleed strip so cards can scroll edge-to-edge (not constrained by section padding) */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow-x: auto;
+    /* With overflow-x scrolling, browsers will clip overflow in Y too.
+       Add vertical padding so large card shadows remain visible (not cut). */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Small padding so card shadows aren't clipped at the viewport edges */
+    --hero-rk-shadow-pad-x: 24px;
+    padding: 16px var(--hero-rk-shadow-pad-x) 140px;
+}
+
+.hero-rk__cards::-webkit-scrollbar {
+    display: none;
+}
+
+.hero-rk__cards-track {
+    display: flex;
+    gap: var(--space-2xl); /* 60 */
+    align-items: stretch;
+    width: max-content;
+    scroll-snap-type: x mandatory;
+    padding: 0;
+}
+
+.hero-rk__card {
+    flex: 0 0 auto;
+    min-width: 300px;
+    background: var(--white, #ffffff);
+    border-radius: var(--space-xs, 8px);
+    padding: 80px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-primary, 'DM Sans', sans-serif);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    color: var(--black, #101010);
+    scroll-snap-align: start;
+    box-shadow:
+      0px 77.706px 55.982px rgba(0, 0, 0, 0.06),
+      0px 41.546px 29.931px rgba(0, 0, 0, 0.05),
+      0px 23.29px 16.779px rgba(0, 0, 0, 0.04),
+      0px 12.369px 8.911px rgba(0, 0, 0, 0.04),
+      0px 5.147px 3.708px rgba(0, 0, 0, 0.03);
+}
+
+/* Improve scroll alignment on touch devices */
+.hero-rk__cards {
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--hero-rk-shadow-pad-x, 24px);
+    scroll-padding-right: var(--hero-rk-shadow-pad-x, 24px);
+}
+
+@media (max-width: 768px) {
+    .section-hero-rk {
+        /* keep vertical spacing (60), reduce horizontal for small screens */
+        padding: var(--space-2xl) var(--space-2xl);
+    }
+    .hero-rk__title {
+        font-size: var(--text-heading-01, 72px);
+        line-height: var(--text-heading-01, 72px);
+    }
+    .hero-rk__card {
+        min-width: 260px;
+        padding: 56px 36px;
+    }
+}
