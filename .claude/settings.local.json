@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(echo \"Checking navigation order (should be: MotoShare -> Taxation Platform -> Vendor Portal):\" grep -h \"taxation-platform.html.*Taxation Platform\" *.html)",
+      "Bash(open vendor-portal.html)",
+      "Bash(qlmanage:*)",
+      "Bash(sips:*)",
+      "Bash(git checkout:*)",
+      "Bash(mkdir:*)",
+      "Bash(open:*)",
+      "Bash(open ai-projects.html)",
+      "Bash(git revert:*)",
+      "Bash(git reset:*)",
+      "Bash(cp:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
