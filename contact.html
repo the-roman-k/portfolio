@@ -104,12 +104,41 @@
                         <path d="M16 26L24 34L32 26" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <a href="mailto:mailtotheroman@gmail.com" class="body-01 interactive-link">mailtotheroman@gmail.com</a>
+                <div class="email-row">
+                    <a href="mailto:mailtotheroman@gmail.com" class="body-01 interactive-link">mailtotheroman@gmail.com</a>
+                    <button class="copy-button" onclick="copyEmail()" aria-label="Copy email to clipboard" title="Copy email">
+                        <svg class="copy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
                 <a href="https://www.linkedin.com/in/krizhanovsky/" class="body-01 interactive-link" target="_blank">https://www.linkedin.com/in/krizhanovsky/</a>
             </div>
         </section>
     </main>
 
     <script src="navigation.js"></script>
+    <script>
+        function copyEmail() {
+            const email = 'mailtotheroman@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const button = document.querySelector('.copy-button');
+                const copyIcon = button.querySelector('.copy-icon');
+                const checkIcon = button.querySelector('.check-icon');
+                
+                copyIcon.style.display = 'none';
+                checkIcon.style.display = 'block';
+                
+                setTimeout(() => {
+                    copyIcon.style.display = 'block';
+                    checkIcon.style.display = 'none';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>

@@ -173,3 +173,42 @@
     gap: var(--space-xl);
   }
 }
+
+/* Email Row with Copy Button */
+.email-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--black);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.copy-button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.copy-button:active {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.copy-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.copy-button .check-icon {
+  color: #22c55e;
+}
