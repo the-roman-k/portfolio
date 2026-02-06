@@ -13,11 +13,24 @@
 .contact-phrase-item {
   padding: var(--space-lg) var(--space-xl);
   border: 1px solid var(--black);
+  transition: transform 220ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  will-change: transform;
 }
 
 .contact-phrase-item p {
   color: var(--white);
   text-align: center;
+  transition: transform 180ms ease;
+}
+
+.contact-phrase-item:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.contact-phrase-item:hover p {
+  transform: translateY(-1px);
 }
 
 .bg-black {
@@ -92,6 +105,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .contact-phrase-item,
+  .contact-phrase-item p,
+  .contact-phrase-item:hover,
+  .contact-phrase-item:hover p,
   .contact-cta-button,
   .contact-cta-button::before,
   .contact-cta-button:hover::before {
