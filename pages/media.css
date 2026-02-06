@@ -2,6 +2,45 @@
    MEDIA PAGE - Typography & Custom Styling
    ========================================================= */
 
+/* Typing Titles */
+.typing-title {
+  position: relative;
+}
+
+.typing-title::after {
+  content: "";
+  display: inline-block;
+  width: 0.12em;
+  height: 1em;
+  margin-left: 0.08em;
+  background: currentColor;
+  transform: translateY(0.08em);
+  animation: typingCaret 700ms steps(1, end) infinite;
+}
+
+.typing-title.typing-done::after {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes typingCaret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-title::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* Media Hero Section */
 .media-hero-section {
   background-image: url('../img/media/section-project-hero.png');
