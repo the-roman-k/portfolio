@@ -322,5 +322,44 @@
     </footer>
 
     <script src="navigation.js"></script>
+    <script>
+        (function () {
+            const sections = Array.from(document.querySelectorAll('.slides-holder section'));
+            if (sections.length === 0) return;
+
+            const immediateSection = document.querySelector('.slides-holder .section-5-columns');
+
+            sections.forEach((section) => {
+                section.classList.add('reveal-on-scroll');
+            });
+
+            if (immediateSection) {
+                immediateSection.classList.add('is-visible');
+            }
+
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) {
+                sections.forEach((section) => section.classList.add('is-visible'));
+                return;
+            }
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2, rootMargin: '0px 0px -12% 0px' }
+            );
+
+            sections.forEach((section) => {
+                if (section === immediateSection) return;
+                observer.observe(section);
+            });
+        })();
+    </script>
 </body>
 </html>

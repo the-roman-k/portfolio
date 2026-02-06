@@ -2,6 +2,28 @@
    DESIGN SYSTEM PAGE - Typography & Custom Styling
    ========================================================= */
 
+/* Scroll Reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Design System Hero Section */
 .design-system-hero {
   background: linear-gradient(180deg, rgba(40, 48, 63, 0.00) 0%, #28303F 100%), linear-gradient(64deg, #272939 11.85%, #2E555E 81.43%);
