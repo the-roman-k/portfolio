@@ -44,3 +44,22 @@
 .bg-main-flow-animation {
   background: #F3F3F3 !important;
 }
+
+/* New Illustration Section */
+.bg-dark-teal {
+  background-color: #002F3D !important;
+}
+
+.vehicle-illustration-section {
+  padding: var(--space-4xl) 0;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+.vehicle-illustration-section img {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
